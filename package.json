@@ -1,0 +1,27 @@
+{
+  "name": "3aimigo-space",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.11"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --ssr src/prerender.tsx --outDir .ssg && node .ssg/prerender.js && node scripts/check-dist.mjs",
+    "preview": "vite preview",
+    "test": "tsc --noEmit && node --test",
+    "import:polomodov": "node scripts/import-polomodov.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "~5.9.3",
+    "vite": "8.3.6"
+  }
+}
