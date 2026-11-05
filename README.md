@@ -2,7 +2,7 @@
 
 A bilingual podcast site about AI in engineering. Alexander Polomodov, Evgeny Sergeev, and Aleksey Litvinov compare hands-on practice, engineering leadership, and architecture.
 
-[English](https://polomodov.github.io/3aimigo.space/) · [Русский](https://polomodov.github.io/3aimigo.space/ru/) · [Original archive](https://polomodov.tech/3-aimigo/)
+[English](https://3aimigo.space/) · [Русский](https://3aimigo.space/ru/) · [Original archive](https://polomodov.tech/3-aimigo/)
 
 The site includes episode pages, summaries, longreads and slides, an interactive topic map, and public briefs for upcoming discussions. The original recordings are in Russian. English is the default site language; every Russian page lives under `/ru/`.
 
@@ -28,8 +28,8 @@ React, TypeScript and Vite generate a static HTML page for every route and local
 
 ## Deploy
 
-GitHub Actions checks pull requests and publishes `main` to GitHub Pages. The default project URL uses the `/3aimigo.space/` base path.
+GitHub Actions checks pull requests and publishes `main` to GitHub Pages at `https://3aimigo.space/`. The repository's Actions variables set `SITE_ORIGIN=https://3aimigo.space` and `BASE_PATH=/` for builds.
 
-The domain `3aimigo.space` is parked at Timeweb. To cut over, verify domain ownership in GitHub Pages, set the repository's custom domain, and point the domain's DNS records to GitHub Pages. Set Actions variables `SITE_ORIGIN=https://3aimigo.space` and `BASE_PATH=/`, redeploy, and confirm HTTPS and both language paths. See [GitHub's custom domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+Cloudflare provides DNS for the domain. The apex uses the GitHub Pages A and AAAA records, and `www` points to `polomodov.github.io` via CNAME. These records use DNS only. GitHub Pages serves HTTPS and redirects `www` to the apex. Keep the GitHub domain verification TXT record in Cloudflare.
 
 Fonts and their licenses are in [public/fonts/](public/fonts/).
