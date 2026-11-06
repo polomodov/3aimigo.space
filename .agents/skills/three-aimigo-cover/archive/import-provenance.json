@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 1,
+  "importedAt": "2026-11-06",
+  "source": {
+    "repository": "https://github.com/polomodov/polomodov",
+    "revision": "50001bbb27a97a18f29afc32f51882bb1c109b19",
+    "path": ".agents/skills/three-aimigo-cover"
+  },
+  "notes": [
+    "Original recipe, artwork, font and archive bytes were copied without modification; LFS pointers were resolved from local objects and SHA-256 verified.",
+    "Russian cover recipes exist for S1E1–S1E13; English cover recipes exist only for S1E1–S1E8. Missing English recipes were not invented.",
+    "Recipe episodePath values are historical polomodov.tech paths and are preserved as provenance, not current site routing.",
+    "archive/covers/inventory.json is the original audit, including historical variants; it does not designate a current publication cover.",
+    "Renderer and skill instructions are adapted for the standalone repository. Template HTML, fixed PNG plates and WOFF2 fonts remain byte-identical."
+  ],
+  "files": [
+    {
+      "path": "archive/covers/3aimigo-6-sq.jpg",
+      "bytes": 959360,
+      "sha256": "dab4773e2ad30a4e894ab212e59fb81778c498850548560ac431e495ec24aa70",
+      "lfsOid": "dab4773e2ad30a4e894ab212e59fb81778c498850548560ac431e495ec24aa70"
+    },
+    {
+      "path": "archive/covers/3aimigo-7-sq.jpg",
+      "bytes": 907590,
+      "sha256": "d17245702595adf9d8e807ed2baefab88c2095680ac0c2b51bdb2581701011b3",
+      "lfsOid": "d17245702595adf9d8e807ed2baefab88c2095680ac0c2b51bdb2581701011b3"
+    },
+    {
+      "path": "archive/covers/3aimigo-7-sq.png",
+      "bytes": 2604946,
+      "sha256": "3952128d2660aa793a57c0095b28ee6f2e2e370448a27e36da4670918f3335f5",
+      "lfsOid": "3952128d2660aa793a57c0095b28ee6f2e2e370448a27e36da4670918f3335f5"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e1.jpg",
+      "bytes": 2227598,
+      "sha256": "4e8de2a008372a5722ad572abcf2f0f26fd301e62fbdcabc278d3262a415483d",
+      "lfsOid": "4e8de2a008372a5722ad572abcf2f0f26fd301e62fbdcabc278d3262a415483d"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e10-square.jpg",
+      "bytes": 721726,
+      "sha256": "81f2e5a2e06e94f27af79e9e82b67885d05a9b9e300d0f0b56e62ab626573139",
+      "lfsOid": "81f2e5a2e06e94f27af79e9e82b67885d05a9b9e300d0f0b56e62ab626573139"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e10-square.png",
+      "bytes": 3166409,
+      "sha256": "8adb976eb65ce783e5b144a5f8228c8eedcae2a6b9098ca13d25f23a048c773c",
+      "lfsOid": "8adb976eb65ce783e5b144a5f8228c8eedcae2a6b9098ca13d25f23a048c773c"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e10.jpg",
+      "bytes": 376305,
+      "sha256": "305ac58c446afc7400b0de22115367ecc55c10e27e3ae7873dec42c4837ed6fe",
+      "lfsOid": "305ac58c446afc7400b0de22115367ecc55c10e27e3ae7873dec42c4837ed6fe"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e10.png",
+      "bytes": 1718063,
+      "sha256": "b09593e83e089255b23ee0760e996ebb57986de9216ce101c0e65af1797cd157",
+      "lfsOid": "b09593e83e089255b23ee0760e996ebb57986de9216ce101c0e65af1797cd157"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e11-square.jpg",
+      "bytes": 720427,
+      "sha256": "04ebbe38faa2c738fc68e637588bc36bf06d23f4df8df7b6f88b331bdddb0221",
+      "lfsOid": "04ebbe38faa2c738fc68e637588bc36bf06d23f4df8df7b6f88b331bdddb0221"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e11-square.png",
+      "bytes": 3164911,
+      "sha256": "632b5e6ce5e1e6fe4fdf00d1524020501c0f3c754994506c648813b32bf9013c",
+      "lfsOid": "632b5e6ce5e1e6fe4fdf00d1524020501c0f3c754994506c648813b32bf9013c"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e11.jpg",
+      "bytes": 372090,
+      "sha256": "13b1487ab63e2d51f771db9f697285d9c79fb2beece864464cb241dce6d2b312",
+      "lfsOid": "13b1487ab63e2d51f771db9f697285d9c79fb2beece864464cb241dce6d2b312"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e11.png",
+      "bytes": 1713398,
+      "sha256": "c7937db24e7edfd02106b12efbf952b15ed7e16b777a639a594d7cfd3194cce3",
+      "lfsOid": "c7937db24e7edfd02106b12efbf952b15ed7e16b777a639a594d7cfd3194cce3"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e12-square.jpg",
+      "bytes": 718469,
+      "sha256": "c90a3eb7a4efc4b99b1762937c7439887bd060b21fe3d3cf3b32e10a7b63512f",
+      "lfsOid": "c90a3eb7a4efc4b99b1762937c7439887bd060b21fe3d3cf3b32e10a7b63512f"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e12-square.png",
+      "bytes": 3167411,
+      "sha256": "848dbdc1cb532c05e0297e24f9ba62ff24ae93df9c52fc67c4ac4f2902d6db21",
+      "lfsOid": "848dbdc1cb532c05e0297e24f9ba62ff24ae93df9c52fc67c4ac4f2902d6db21"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e12.jpg",
+      "bytes": 367299,
+      "sha256": "6c8e5eebdefd41d6d91e68d53fe6ad7c1deb716a17f2baea28ccbfa759c8b668",
+      "lfsOid": "6c8e5eebdefd41d6d91e68d53fe6ad7c1deb716a17f2baea28ccbfa759c8b668"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e12.png",
+      "bytes": 1701955,
+      "sha256": "f353814edd50ee8a362b56891e8051bbf9088b968cc71850f82502f6d9c428f7",
+      "lfsOid": "f353814edd50ee8a362b56891e8051bbf9088b968cc71850f82502f6d9c428f7"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e13-square.jpg",
+      "bytes": 721177,
+      "sha256": "5cd8f13217744c863c910687e76b334582181acf576b8ea277d2c3c8532ae5a6",
+      "lfsOid": "5cd8f13217744c863c910687e76b334582181acf576b8ea277d2c3c8532ae5a6"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e13-square.png",
+      "bytes": 3167734,
+      "sha256": "efe77219075b05956c181fe7893004a8df30cb93ad042a02a340481853114f38",
+      "lfsOid": "efe77219075b05956c181fe7893004a8df30cb93ad042a02a340481853114f38"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e13.jpg",
+      "bytes": 371803,
+      "sha256": "08854359e96c8f7fe4d9d8186d9b1be78f3ef967a505d83966cd2d26d4a52ccd",
+      "lfsOid": "08854359e96c8f7fe4d9d8186d9b1be78f3ef967a505d83966cd2d26d4a52ccd"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e13.png",
+      "bytes": 1710156,
+      "sha256": "1a68dcb56d66c4a3e46660ee032f2e6d743c741707c4675bfd79c6c3954e6cb6",
+      "lfsOid": "1a68dcb56d66c4a3e46660ee032f2e6d743c741707c4675bfd79c6c3954e6cb6"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e2-square.jpg",
+      "bytes": 942392,
+      "sha256": "2b3d7b942085952afcb21240675be41c2b31c6d530af52a3553fa5dd9232b3f7",
+      "lfsOid": "2b3d7b942085952afcb21240675be41c2b31c6d530af52a3553fa5dd9232b3f7"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e2-square.png",
+      "bytes": 2802358,
+      "sha256": "8b8e2263b91daca6d7a954011d919ef2081e1c164eb2ac4427b6e74f7b9a73a6",
+      "lfsOid": "8b8e2263b91daca6d7a954011d919ef2081e1c164eb2ac4427b6e74f7b9a73a6"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e2.jpg",
+      "bytes": 832656,
+      "sha256": "7cc7910096f738c7163c2cb5e0467d89dca3e5f6d8c877334e8927eb1e8448ec",
+      "lfsOid": "7cc7910096f738c7163c2cb5e0467d89dca3e5f6d8c877334e8927eb1e8448ec"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e2.png",
+      "bytes": 2618295,
+      "sha256": "e7307306f3b976afbe05c99aa40f6a0dd69819cb050b368dcff456d3a993e4c2",
+      "lfsOid": "e7307306f3b976afbe05c99aa40f6a0dd69819cb050b368dcff456d3a993e4c2"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e3-sq.png",
+      "bytes": 3092990,
+      "sha256": "7a575c0f53f4eb4ac38bcdaef75a0eadfa7b2e2910a09ff64098d6539576aa7a",
+      "lfsOid": "7a575c0f53f4eb4ac38bcdaef75a0eadfa7b2e2910a09ff64098d6539576aa7a"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e3.jpg",
+      "bytes": 844654,
+      "sha256": "86c3b738170f2c6d740360e1c4005b6f8d8a909f031f8bbe0fc9ba3669ed4cb6",
+      "lfsOid": "86c3b738170f2c6d740360e1c4005b6f8d8a909f031f8bbe0fc9ba3669ed4cb6"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e3.png",
+      "bytes": 2677004,
+      "sha256": "a6616247fe84a21e4ac2d7a10a97082df939c257d5c2e393957c153b5bd2b51e",
+      "lfsOid": "a6616247fe84a21e4ac2d7a10a97082df939c257d5c2e393957c153b5bd2b51e"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e4-logo-square.jpg",
+      "bytes": 933071,
+      "sha256": "23789f9cc1a7ebae0bc59b4e02e03859d4a22d403097e82074652eef2676d459",
+      "lfsOid": "23789f9cc1a7ebae0bc59b4e02e03859d4a22d403097e82074652eef2676d459"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e4-logo-square.png",
+      "bytes": 2817786,
+      "sha256": "e3c8407aee42e58f3572c3cad07dd2b03ed4be2e76d5b2cb8332158386978838",
+      "lfsOid": "e3c8407aee42e58f3572c3cad07dd2b03ed4be2e76d5b2cb8332158386978838"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e4-logo.jpg",
+      "bytes": 828210,
+      "sha256": "a38db53cd2dc43fc25104e6118339aa244405b99cdbd3c7ba484bf7e32629de1",
+      "lfsOid": "a38db53cd2dc43fc25104e6118339aa244405b99cdbd3c7ba484bf7e32629de1"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e4-logo.png",
+      "bytes": 2637625,
+      "sha256": "f1921bac210db3001ca25c4028c4c31c51e94b4ab73ac10fd90016f0cedd4384",
+      "lfsOid": "f1921bac210db3001ca25c4028c4c31c51e94b4ab73ac10fd90016f0cedd4384"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e4.png",
+      "bytes": 2789851,
+      "sha256": "8e2fc98cf76b6ff5dbad328c922ce59231890625e06772e1e79ee587572e60a0",
+      "lfsOid": "8e2fc98cf76b6ff5dbad328c922ce59231890625e06772e1e79ee587572e60a0"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e5-sq.jpg",
+      "bytes": 913296,
+      "sha256": "e12d259e10a27059107fd1cffb18c7543db7a333fece6be3328902ff7138ed66",
+      "lfsOid": "e12d259e10a27059107fd1cffb18c7543db7a333fece6be3328902ff7138ed66"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e5-sq.png",
+      "bytes": 2751593,
+      "sha256": "ace5279ea6d2877c51079cea41948e8bc2ee4c05ac82c7798a44988a33e4b871",
+      "lfsOid": "ace5279ea6d2877c51079cea41948e8bc2ee4c05ac82c7798a44988a33e4b871"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e5.jpg",
+      "bytes": 854421,
+      "sha256": "d691894bd0f9a18ae42ddfeb617cfe5e172781163c959ccbaf3dbfeb39f37ec5",
+      "lfsOid": "d691894bd0f9a18ae42ddfeb617cfe5e172781163c959ccbaf3dbfeb39f37ec5"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e5.png",
+      "bytes": 2648133,
+      "sha256": "502a8e6bfe346c4a5a135b904cca1606b29422397a6b00832d8a003effcec86c",
+      "lfsOid": "502a8e6bfe346c4a5a135b904cca1606b29422397a6b00832d8a003effcec86c"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e6-square.png",
+      "bytes": 2708136,
+      "sha256": "755845ebf5ca6fd757e7badb0a3f338db030d5b4ec2011ec05ee390626127a52",
+      "lfsOid": "755845ebf5ca6fd757e7badb0a3f338db030d5b4ec2011ec05ee390626127a52"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e6.jpg",
+      "bytes": 832988,
+      "sha256": "2e8fc3835c6d5cb6ac92ac33dc6e3c4d701215771dc951aa10a3be853fa00557",
+      "lfsOid": "2e8fc3835c6d5cb6ac92ac33dc6e3c4d701215771dc951aa10a3be853fa00557"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e6.png",
+      "bytes": 2581228,
+      "sha256": "39d0049a4fbbf3f5826c8e2f62f96b465714c5e2479f1ab1c32a601e54c033c8",
+      "lfsOid": "39d0049a4fbbf3f5826c8e2f62f96b465714c5e2479f1ab1c32a601e54c033c8"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e7.jpg",
+      "bytes": 758124,
+      "sha256": "b46127b1e17a405fef05dfdf5fbea38ae9d8b70323897c42ef8de7b7bcda505f",
+      "lfsOid": "b46127b1e17a405fef05dfdf5fbea38ae9d8b70323897c42ef8de7b7bcda505f"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e7.png",
+      "bytes": 2506447,
+      "sha256": "d206537e0a13063929f9ca41e3b4ce7165bbc79b6a774305eeeab0b7502d603f",
+      "lfsOid": "d206537e0a13063929f9ca41e3b4ce7165bbc79b6a774305eeeab0b7502d603f"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e8-square.jpg",
+      "bytes": 1019394,
+      "sha256": "339dd2aba6a6c6641e48c42bce1cf17aa32d103edc049ea90e1206d037db877e",
+      "lfsOid": "339dd2aba6a6c6641e48c42bce1cf17aa32d103edc049ea90e1206d037db877e"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e8-square.png",
+      "bytes": 3160769,
+      "sha256": "c80aac6e922102b73bdc2f7e3fa675c4c568a82a6f454472751ca6e7add7462e",
+      "lfsOid": "c80aac6e922102b73bdc2f7e3fa675c4c568a82a6f454472751ca6e7add7462e"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e8.jpg",
+      "bytes": 474639,
+      "sha256": "84498629066c0faa69059e8863a5c5770279c3e814dbdf722f7c37a289c87084",
+      "lfsOid": "84498629066c0faa69059e8863a5c5770279c3e814dbdf722f7c37a289c87084"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e8.png",
+      "bytes": 1708265,
+      "sha256": "86a39b2e8d10d7721a6380045aa091171920b2ab66887acd6de1a2c2f1b1b76b",
+      "lfsOid": "86a39b2e8d10d7721a6380045aa091171920b2ab66887acd6de1a2c2f1b1b76b"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e9-square.jpg",
+      "bytes": 717625,
+      "sha256": "fbfe9d0b0ee65c0ed807f547f3c482acfaa8a196c33a6780f960533e9165136b",
+      "lfsOid": "fbfe9d0b0ee65c0ed807f547f3c482acfaa8a196c33a6780f960533e9165136b"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e9-square.png",
+      "bytes": 3160460,
+      "sha256": "0017d44b2865d4e99d9c3af49f3b4f8f4d65a4ef98284479c7cc0ff78b1591c2",
+      "lfsOid": "0017d44b2865d4e99d9c3af49f3b4f8f4d65a4ef98284479c7cc0ff78b1591c2"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e9.jpg",
+      "bytes": 374743,
+      "sha256": "aa0b2dcdc4926b3ad3c14790297ace8a9b7b9020e7344003b9447f91fae2b857",
+      "lfsOid": "aa0b2dcdc4926b3ad3c14790297ace8a9b7b9020e7344003b9447f91fae2b857"
+    },
+    {
+      "path": "archive/covers/3aimigo-s1e9.png",
+      "bytes": 1713936,
+      "sha256": "d65fb42c1405dec497ffaf22d3bebbbd9145b26ac395f4349f8f1b6cdc724c5f",
+      "lfsOid": "d65fb42c1405dec497ffaf22d3bebbbd9145b26ac395f4349f8f1b6cdc724c5f"
+    },
+    {
+      "path": "archive/covers/inventory.json",
+      "bytes": 26152,
+      "sha256": "f2e0d41493834b19282a07640ed6156db2f191eebf701947719d91b94c7a44e0"
+    },
+    {
+      "path": "archive/covers/s1e1-en.jpg",
+      "bytes": 371731,
+      "sha256": "f849d1fe957da142a27cc182fa8d846a98544c0a7ba5a5917a9011d53c095a02",
+      "lfsOid": "f849d1fe957da142a27cc182fa8d846a98544c0a7ba5a5917a9011d53c095a02"
+    },
+    {
+      "path": "archive/covers/s1e1-en.png",
+      "bytes": 1713196,
+      "sha256": "6d07303242ce2da45d936d49cd3092246b90b80e3c3d90b21fd73d3fa27a51a5",
+      "lfsOid": "6d07303242ce2da45d936d49cd3092246b90b80e3c3d90b21fd73d3fa27a51a5"
+    },
+    {
+      "path": "archive/covers/s1e1-square.jpg",
+      "bytes": 1017474,
+      "sha256": "2e656e6243b350b0ed48bba2b6253bd6fce848455ac36c25d414aa4923dfa1b9",
+      "lfsOid": "2e656e6243b350b0ed48bba2b6253bd6fce848455ac36c25d414aa4923dfa1b9"
+    },
+    {
+      "path": "archive/covers/s1e1-square.png",
+      "bytes": 3161593,
+      "sha256": "ea327a074fa14a115ef1147fba91b5e74cdaf2f759389100374fc001e8e8fd18",
+      "lfsOid": "ea327a074fa14a115ef1147fba91b5e74cdaf2f759389100374fc001e8e8fd18"
+    },
+    {
+      "path": "archive/covers/s1e1.jpg",
+      "bytes": 470718,
+      "sha256": "7432721b0a89e39bceda1d923982b6fbd2259cd2ffdc131bde7b2141f53f7f5d",
+      "lfsOid": "7432721b0a89e39bceda1d923982b6fbd2259cd2ffdc131bde7b2141f53f7f5d"
+    },
+    {
+      "path": "archive/covers/s1e1.png",
+      "bytes": 1701108,
+      "sha256": "00ed9a0932afcbe4d27440f194d60524d97c1c4d236d0990f6d388d3bae55e1c",
+      "lfsOid": "00ed9a0932afcbe4d27440f194d60524d97c1c4d236d0990f6d388d3bae55e1c"
+    },
+    {
+      "path": "archive/covers/s1e2-en.jpg",
+      "bytes": 376869,
+      "sha256": "020ac0e494e14c575761c26cbcfa58a8ea41a2288450c81c043b7648ea1ba9b2",
+      "lfsOid": "020ac0e494e14c575761c26cbcfa58a8ea41a2288450c81c043b7648ea1ba9b2"
+    },
+    {
+      "path": "archive/covers/s1e2-en.png",
+      "bytes": 1722188,
+      "sha256": "3b208e269c01dea3d6c4cd843a196435ebc9de6323a465189d1a20888c419967",
+      "lfsOid": "3b208e269c01dea3d6c4cd843a196435ebc9de6323a465189d1a20888c419967"
+    },
+    {
+      "path": "archive/covers/s1e2-square.jpg",
+      "bytes": 1024369,
+      "sha256": "ddfec91697adccd5b5436d807d4f6e321b1249f2f9da9598291d62b11d97aba4",
+      "lfsOid": "ddfec91697adccd5b5436d807d4f6e321b1249f2f9da9598291d62b11d97aba4"
+    },
+    {
+      "path": "archive/covers/s1e2-square.png",
+      "bytes": 3170007,
+      "sha256": "1a3feeee257852f127110c880af1b13e958fbc3337c04907c2459bab8ce4cb74",
+      "lfsOid": "1a3feeee257852f127110c880af1b13e958fbc3337c04907c2459bab8ce4cb74"
+    },
+    {
+      "path": "archive/covers/s1e2.jpg",
+      "bytes": 483796,
+      "sha256": "5bc276d1ce4578b4103dee0d057925f4135bf05a707e085a3f349281fa6011b1",
+      "lfsOid": "5bc276d1ce4578b4103dee0d057925f4135bf05a707e085a3f349281fa6011b1"
+    },
+    {
+      "path": "archive/covers/s1e2.png",
+      "bytes": 1720309,
+      "sha256": "5aafbfb9343969ad401cf436a6c150ee1ba4bb0a77812baf7d82658b530ba415",
+      "lfsOid": "5aafbfb9343969ad401cf436a6c150ee1ba4bb0a77812baf7d82658b530ba415"
+    },
+    {
+      "path": "archive/covers/s1e3-en.jpg",
+      "bytes": 367294,
+      "sha256": "6f662146f86670ca9f69ff64a3d27dea8d5878840325b38e84710da181ca9a45",
+      "lfsOid": "6f662146f86670ca9f69ff64a3d27dea8d5878840325b38e84710da181ca9a45"
+    },
+    {
+      "path": "archive/covers/s1e3-en.png",
+      "bytes": 1701679,
+      "sha256": "54264784bbc0162801812e14437548e894ec3d799c6e3c78c54fe2fea6b17f9d",
+      "lfsOid": "54264784bbc0162801812e14437548e894ec3d799c6e3c78c54fe2fea6b17f9d"
+    },
+    {
+      "path": "archive/covers/s1e3-square.jpg",
+      "bytes": 1018326,
+      "sha256": "50cd54beb5518fa207dc53756531e50f319264c4746831f999b8e069b743655b",
+      "lfsOid": "50cd54beb5518fa207dc53756531e50f319264c4746831f999b8e069b743655b"
+    },
+    {
+      "path": "archive/covers/s1e3-square.png",
+      "bytes": 3163617,
+      "sha256": "64bca57abd9a586ef3cfeb00de2bcc1ca5ad7ba665303ea3f034863e70478482",
+      "lfsOid": "64bca57abd9a586ef3cfeb00de2bcc1ca5ad7ba665303ea3f034863e70478482"
+    },
+    {
+      "path": "archive/covers/s1e3.jpg",
+      "bytes": 471630,
+      "sha256": "32c478ef59df72035cce4ad93ee94fdfcb95971fdfd641f187ad314f4a98d66d",
+      "lfsOid": "32c478ef59df72035cce4ad93ee94fdfcb95971fdfd641f187ad314f4a98d66d"
+    },
+    {
+      "path": "archive/covers/s1e3.png",
+      "bytes": 1701924,
+      "sha256": "6dcf75ee0e0a2a16810f0e390bc657397bbf2967e2986cbb035cc28cfc3402a5",
+      "lfsOid": "6dcf75ee0e0a2a16810f0e390bc657397bbf2967e2986cbb035cc28cfc3402a5"
+    },
+    {
+      "path": "archive/covers/s1e4-en.jpg",
+      "bytes": 373393,
+      "sha256": "e27e587b55d0a89f878a2eec20dfddcad1651022393c3c2b7ceaadfc7878c9cc",
+      "lfsOid": "e27e587b55d0a89f878a2eec20dfddcad1651022393c3c2b7ceaadfc7878c9cc"
+    },
+    {
+      "path": "archive/covers/s1e4-en.png",
+      "bytes": 1713622,
+      "sha256": "bc95ffebc12bc8a2c2fedaefdab0cc047f6a583cb386bbba646c3c414b1602da",
+      "lfsOid": "bc95ffebc12bc8a2c2fedaefdab0cc047f6a583cb386bbba646c3c414b1602da"
+    },
+    {
+      "path": "archive/covers/s1e4-square.jpg",
+      "bytes": 1024916,
+      "sha256": "505e8a063f50339308fc4ccb390a248435ccbac628ac5df3d513fcf6d512bb22",
+      "lfsOid": "505e8a063f50339308fc4ccb390a248435ccbac628ac5df3d513fcf6d512bb22"
+    },
+    {
+      "path": "archive/covers/s1e4-square.png",
+      "bytes": 3170183,
+      "sha256": "958744d2fb1fe8257bb26dc562a7553def878684e4967a87b103d162904a3451",
+      "lfsOid": "958744d2fb1fe8257bb26dc562a7553def878684e4967a87b103d162904a3451"
+    },
+    {
+      "path": "archive/covers/s1e4.jpg",
+      "bytes": 481656,
+      "sha256": "3a97f33afeb4f0e86cdadc851c172a164551c6ec9b9c58db7862ea7b6323a583",
+      "lfsOid": "3a97f33afeb4f0e86cdadc851c172a164551c6ec9b9c58db7862ea7b6323a583"
+    },
+    {
+      "path": "archive/covers/s1e4.png",
+      "bytes": 1717901,
+      "sha256": "f204fa3636a40fb0d280d6f16599a521368d3fb497dd7184bc846c311b2cb3ba",
+      "lfsOid": "f204fa3636a40fb0d280d6f16599a521368d3fb497dd7184bc846c311b2cb3ba"
+    },
+    {
+      "path": "archive/covers/s1e5-en.jpg",
+      "bytes": 381301,
+      "sha256": "f9ef7a72ead86b2467bc3d498114d1eeb49b462230fa9913b54e1c81e6987d92",
+      "lfsOid": "f9ef7a72ead86b2467bc3d498114d1eeb49b462230fa9913b54e1c81e6987d92"
+    },
+    {
+      "path": "archive/covers/s1e5-en.png",
+      "bytes": 1723332,
+      "sha256": "ad88fe653755a46f3301a1d017c1464d8714497e2f0b1c22f769263064e51ad5",
+      "lfsOid": "ad88fe653755a46f3301a1d017c1464d8714497e2f0b1c22f769263064e51ad5"
+    },
+    {
+      "path": "archive/covers/s1e5-square.jpg",
+      "bytes": 1028141,
+      "sha256": "b91048d26833d145931c380ac629e7772f31342e1ef339691394a8e98804a997",
+      "lfsOid": "b91048d26833d145931c380ac629e7772f31342e1ef339691394a8e98804a997"
+    },
+    {
+      "path": "archive/covers/s1e5-square.png",
+      "bytes": 3171570,
+      "sha256": "3497204bed59801e8c12afda634e39fb89d9e60ae0d300cf8261093e36430e3b",
+      "lfsOid": "3497204bed59801e8c12afda634e39fb89d9e60ae0d300cf8261093e36430e3b"
+    },
+    {
+      "path": "archive/covers/s1e5.jpg",
+      "bytes": 483463,
+      "sha256": "6ff729568641bd12942884e266a1f6c437612c96a6d200865e52868f23d4ef2e",
+      "lfsOid": "6ff729568641bd12942884e266a1f6c437612c96a6d200865e52868f23d4ef2e"
+    },
+    {
+      "path": "archive/covers/s1e5.png",
+      "bytes": 1720722,
+      "sha256": "014f9c3d2e5c7bfa6be1d27a3019d3ee3151d09b8cbdac884fb0ad595792fe7d",
+      "lfsOid": "014f9c3d2e5c7bfa6be1d27a3019d3ee3151d09b8cbdac884fb0ad595792fe7d"
+    },
+    {
+      "path": "archive/covers/s1e6-en.jpg",
+      "bytes": 377537,
+      "sha256": "bef645f146dc5eb2f8df8237cb197504c1452ce24051245ef512281c2da3024d",
+      "lfsOid": "bef645f146dc5eb2f8df8237cb197504c1452ce24051245ef512281c2da3024d"
+    },
+    {
+      "path": "archive/covers/s1e6-en.png",
+      "bytes": 1718951,
+      "sha256": "cc6e748d7197b1162b18885b0ccfb689478b3297e305423e18728201c8b97055",
+      "lfsOid": "cc6e748d7197b1162b18885b0ccfb689478b3297e305423e18728201c8b97055"
+    },
+    {
+      "path": "archive/covers/s1e6-square.jpg",
+      "bytes": 1029232,
+      "sha256": "05ae43698fb56aa773efc0c0778fbcc9b6c7ea2424f59b1023ede0f03cf790d5",
+      "lfsOid": "05ae43698fb56aa773efc0c0778fbcc9b6c7ea2424f59b1023ede0f03cf790d5"
+    },
+    {
+      "path": "archive/covers/s1e6-square.png",
+      "bytes": 3166823,
+      "sha256": "f9453e784d38b625903325a9b39ebb4576544efb9ded6c31d72eb060fd32d62f",
+      "lfsOid": "f9453e784d38b625903325a9b39ebb4576544efb9ded6c31d72eb060fd32d62f"
+    },
+    {
+      "path": "archive/covers/s1e6.jpg",
+      "bytes": 485168,
+      "sha256": "924d499398f45ba3077a91c8a2aa007b6581fe48867c20d5e972c3dafacb36bf",
+      "lfsOid": "924d499398f45ba3077a91c8a2aa007b6581fe48867c20d5e972c3dafacb36bf"
+    },
+    {
+      "path": "archive/covers/s1e6.png",
+      "bytes": 1719080,
+      "sha256": "a8d32f11cfb895198f66db944b63908be5f97869710dab421fa7a8b812eac524",
+      "lfsOid": "a8d32f11cfb895198f66db944b63908be5f97869710dab421fa7a8b812eac524"
+    },
+    {
+      "path": "archive/covers/s1e7-en.jpg",
+      "bytes": 368656,
+      "sha256": "79268faf52c9c0082477ebb1725e09dfa9e8d19bb1194d138c5822180d744012",
+      "lfsOid": "79268faf52c9c0082477ebb1725e09dfa9e8d19bb1194d138c5822180d744012"
+    },
+    {
+      "path": "archive/covers/s1e7-en.png",
+      "bytes": 1705196,
+      "sha256": "c25bafc1ae63be6f794b4be43d60b96b2ac52f4187ec64ca10d0c4eb3b716106",
+      "lfsOid": "c25bafc1ae63be6f794b4be43d60b96b2ac52f4187ec64ca10d0c4eb3b716106"
+    },
+    {
+      "path": "archive/covers/s1e7-square.jpg",
+      "bytes": 1020471,
+      "sha256": "feb20fc0802352dc91a7f731f464149fd050bc68c5bc20cf67041780820b8e88",
+      "lfsOid": "feb20fc0802352dc91a7f731f464149fd050bc68c5bc20cf67041780820b8e88"
+    },
+    {
+      "path": "archive/covers/s1e7-square.png",
+      "bytes": 3166121,
+      "sha256": "33bfb85e72d2bd23af0df0c90b5d4c763646cea117d3783bd7cec3056237acb7",
+      "lfsOid": "33bfb85e72d2bd23af0df0c90b5d4c763646cea117d3783bd7cec3056237acb7"
+    },
+    {
+      "path": "archive/covers/s1e7.jpg",
+      "bytes": 471088,
+      "sha256": "f23ac32bad45ca36cdef9d9d7d47ad51a28ae46ac22b64b96d9f987db46d5b62",
+      "lfsOid": "f23ac32bad45ca36cdef9d9d7d47ad51a28ae46ac22b64b96d9f987db46d5b62"
+    },
+    {
+      "path": "archive/covers/s1e7.png",
+      "bytes": 1701993,
+      "sha256": "a348e631150294ddafe5f7594c2101191358a50ef5fa556ce1f5f74ca8151301",
+      "lfsOid": "a348e631150294ddafe5f7594c2101191358a50ef5fa556ce1f5f74ca8151301"
+    },
+    {
+      "path": "archive/covers/s1e8-en.jpg",
+      "bytes": 372365,
+      "sha256": "a725cc90d25d629afabef7fd0d254a0bbab292b237c6860f1cbb30fe3d86934f",
+      "lfsOid": "a725cc90d25d629afabef7fd0d254a0bbab292b237c6860f1cbb30fe3d86934f"
+    },
+    {
+      "path": "archive/covers/s1e8-en.png",
+      "bytes": 1713988,
+      "sha256": "fb6eb8a6753fb26fe2b93c3abbd00544f642b6b4e22ea95fe4018af6ef2f5e46",
+      "lfsOid": "fb6eb8a6753fb26fe2b93c3abbd00544f642b6b4e22ea95fe4018af6ef2f5e46"
+    },
+    {
+      "path": "archive/episodes/s1e1-en.json",
+      "bytes": 158,
+      "sha256": "09990727561a40e0e5fefa4aa141c59def0bf9b5d8d99c7332bb7d8384c9eb14"
+    },
+    {
+      "path": "archive/episodes/s1e1.json",
+      "bytes": 91,
+      "sha256": "bc28eff13ce5241225bd688449a0d3bd928a586ff7958d7d3747166262ddf39a"
+    },
+    {
+      "path": "archive/episodes/s1e10.json",
+      "bytes": 129,
+      "sha256": "603ba648a28dd210bd30cb382b8f8020f4e3be0cb9d6c31740bc5eb0463f97bc"
+    },
+    {
+      "path": "archive/episodes/s1e11.json",
+      "bytes": 111,
+      "sha256": "01c4a6159f1aed3f9b76c4a37b6f124b90daf67d0c117a69fb3fdc394472decc"
+    },
+    {
+      "path": "archive/episodes/s1e12.json",
+      "bytes": 96,
+      "sha256": "f5a81a8af803805412fc0540f86b068ed96a89aa4613cac3e6ea8f537c665dcd"
+    },
+    {
+      "path": "archive/episodes/s1e13.json",
+      "bytes": 105,
+      "sha256": "29a35222884090236aa5f012d6061fd87d3a24e2680ee1b74c5178119cc93293"
+    },
+    {
+      "path": "archive/episodes/s1e2-en.json",
+      "bytes": 188,
+      "sha256": "1e981fed3b0cffdc1481c3444ccdd714f98564d4fa7723ef97357deae36949cd"
+    },
+    {
+      "path": "archive/episodes/s1e2.json",
+      "bytes": 130,
+      "sha256": "604fb0e80c68c9c24bbca00fce7a702566e31d1493058d4437a7b5bf24eada1b"
+    },
+    {
+      "path": "archive/episodes/s1e3-en.json",
+      "bytes": 128,
+      "sha256": "342c6fe3397b97c200c2194da93d445578921d2bd705ec4f6e4d16731c745605"
+    },
+    {
+      "path": "archive/episodes/s1e3.json",
+      "bytes": 93,
+      "sha256": "974571a42ec5ce41f66b74c4a7b39c1a361ba4933e0055d940c5a5e13ca8867b"
+    },
+    {
+      "path": "archive/episodes/s1e4-en.json",
+      "bytes": 181,
+      "sha256": "61422f99a36ac60e1595cc5fae72ae14809d964a6d9ab68512c71fb841e02741"
+    },
+    {
+      "path": "archive/episodes/s1e4.json",
+      "bytes": 121,
+      "sha256": "7fe4fe1057256274809ade640bb81fab7c4c91248bad19919fed0c08c9b8effb"
+    },
+    {
+      "path": "archive/episodes/s1e5-en.json",
+      "bytes": 219,
+      "sha256": "6d7974126f854ecb5f2b79ab30b281b3d65acd850423cbed31324cdf8f71fdbe"
+    },
+    {
+      "path": "archive/episodes/s1e5.json",
+      "bytes": 137,
+      "sha256": "57dab77da3fd15c5b636ca247e88771c3c48b0a70ed25f535ead8de1b54296ca"
+    },
+    {
+      "path": "archive/episodes/s1e6-en.json",
+      "bytes": 193,
+      "sha256": "4a5b35e07444488f794629ac920eac005327869ca57ceda0826c185b632bc160"
+    },
+    {
+      "path": "archive/episodes/s1e6.json",
+      "bytes": 148,
+      "sha256": "ba525b7be0f2411f59fd080d4c8a9447915fe524786fca8c8b8ce3cc93f29c4f"
+    },
+    {
+      "path": "archive/episodes/s1e7-en.json",
+      "bytes": 134,
+      "sha256": "461b4e733427b02fc476ba683b36e7f892ec602f6a07e76b0b84de9821032cd2"
+    },
+    {
+      "path": "archive/episodes/s1e7.json",
+      "bytes": 97,
+      "sha256": "bc4fb195dc203e2a7bc9cfef0ee3bd5f5a6549251ea0651095d0ed8dc2f0e9c1"
+    },
+    {
+      "path": "archive/episodes/s1e8-en.json",
+      "bytes": 167,
+      "sha256": "36b385ab242f9efce7ac8de55a8d251e3ff081a2bf13a1166901c790ff2614a3"
+    },
+    {
+      "path": "archive/episodes/s1e8.json",
+      "bytes": 100,
+      "sha256": "fd728ddde9d516aa8859899f0900263e7279682ecada7ad2ddc674e81b31f593"
+    },
+    {
+      "path": "archive/episodes/s1e9.json",
+      "bytes": 128,
+      "sha256": "66a1e1a442a5455f3c5980688e1cc00739ae4921f5b24801159e46de026a8e06"
+    },
+    {
+      "path": "archive/sources/s1e1-youtube-thumbnail.jpg",
+      "bytes": 360052,
+      "sha256": "e5c4d6bff64e252d5e4d32cef41524358d8c5da33542dc2d11ac55b28e1e176e",
+      "lfsOid": "e5c4d6bff64e252d5e4d32cef41524358d8c5da33542dc2d11ac55b28e1e176e"
+    },
+    {
+      "path": "archive/sources/s1e2-youtube-thumbnail.jpg",
+      "bytes": 352576,
+      "sha256": "89659131f2fe740de2866fa18cc95d971b3d1b65712edf9dbc906aab8a719799",
+      "lfsOid": "89659131f2fe740de2866fa18cc95d971b3d1b65712edf9dbc906aab8a719799"
+    },
+    {
+      "path": "archive/sources/s1e3-youtube-thumbnail.jpg",
+      "bytes": 356210,
+      "sha256": "f3e00f59530cfbfebdcb64bffd60ef7a580dc5d5f5c60a7cd24b5efd19f5afec",
+      "lfsOid": "f3e00f59530cfbfebdcb64bffd60ef7a580dc5d5f5c60a7cd24b5efd19f5afec"
+    },
+    {
+      "path": "archive/sources/s1e4-youtube-thumbnail.jpg",
+      "bytes": 365956,
+      "sha256": "87a4541960145a2925c4310314403b3e41e8da03f4e5bf981f553f64aaf461e5",
+      "lfsOid": "87a4541960145a2925c4310314403b3e41e8da03f4e5bf981f553f64aaf461e5"
+    },
+    {
+      "path": "archive/sources/s1e5-youtube-thumbnail.jpg",
+      "bytes": 374272,
+      "sha256": "6ab133049932c64d9eee88da2784d6bf6a929a628ac05019dd0439134ff3b35b",
+      "lfsOid": "6ab133049932c64d9eee88da2784d6bf6a929a628ac05019dd0439134ff3b35b"
+    },
+    {
+      "path": "archive/sources/s1e6-youtube-thumbnail.jpg",
+      "bytes": 366816,
+      "sha256": "058b9db47be27c88d3c95d6846215809672d05df8ea565c654b4d9819c8018b6",
+      "lfsOid": "058b9db47be27c88d3c95d6846215809672d05df8ea565c654b4d9819c8018b6"
+    },
+    {
+      "path": "archive/sources/s1e7-square.png",
+      "bytes": 2604946,
+      "sha256": "3952128d2660aa793a57c0095b28ee6f2e2e370448a27e36da4670918f3335f5",
+      "lfsOid": "3952128d2660aa793a57c0095b28ee6f2e2e370448a27e36da4670918f3335f5"
+    },
+    {
+      "path": "archive/sources/s1e7-youtube-thumbnail.jpg",
+      "bytes": 329542,
+      "sha256": "af27ae9d7c7b356ed1e01604f9eed38a32918fd874a9f6036d2e796207b98a2c",
+      "lfsOid": "af27ae9d7c7b356ed1e01604f9eed38a32918fd874a9f6036d2e796207b98a2c"
+    },
+    {
+      "path": "template/cover.html",
+      "bytes": 4733,
+      "sha256": "2109b3d5da13caf63d85b0d73fb311f933d9dd46fd5a1b0fdc63d7531485b26f"
+    },
+    {
+      "path": "template/fonts/roboto-condensed-cyrillic.woff2",
+      "bytes": 24828,
+      "sha256": "b96fbbb3e96d271177d728b44a7603815b3baf259eb0979fbc75640e93a23962"
+    },
+    {
+      "path": "template/fonts/roboto-condensed-latin-ext.woff2",
+      "bytes": 28908,
+      "sha256": "a0116a788a1915a01006334bf8ae893967eb65ae229da985c5095ddde5f6a977"
+    },
+    {
+      "path": "template/fonts/roboto-condensed-latin.woff2",
+      "bytes": 46080,
+      "sha256": "718ced55c5d8e207d6d14b1765fe6cf5886882834f45cc0ad23283cd210f9a96"
+    },
+    {
+      "path": "template/fonts.css",
+      "bytes": 1027,
+      "sha256": "841f9c87f4c6fb09ffcd2a534ec9132f0cad704ce01c775179bd2c304a39b6d3"
+    },
+    {
+      "path": "template/plate.png",
+      "bytes": 1642266,
+      "sha256": "fb865adc689d851d98194bc1866116fe21bc51487de180d17cd099eb047a1cfe",
+      "lfsOid": "fb865adc689d851d98194bc1866116fe21bc51487de180d17cd099eb047a1cfe"
+    },
+    {
+      "path": "template/sq/plate.png",
+      "bytes": 3067133,
+      "sha256": "8712fb2e3b5376e194608f8c788619b7687563010db80c67c868996f4ef25add",
+      "lfsOid": "8712fb2e3b5376e194608f8c788619b7687563010db80c67c868996f4ef25add"
+    }
+  ],
+  "supplementalSources": [
+    {
+      "path": "template/fonts/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/robotocondensed/OFL.txt",
+      "retrievedAt": "2026-11-06",
+      "sha256": "0e4cc6ece88573545be2ed25835363662a6182ba4a4c1b5c8feda52add30e8a6"
+    }
+  ]
+}

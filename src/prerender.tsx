@@ -20,6 +20,7 @@ const write = async (file: string, content: string) => {
 for (const lang of languages) {
   for (const route of [...routes, '404']) {
     const current = page(lang, route);
+    const cover = asset(current.episode?.covers?.[lang] ?? 'cover.webp');
     const schema = current.episode ? {
       '@context': 'https://schema.org',
       '@type': 'PodcastEpisode',
@@ -29,6 +30,7 @@ for (const lang of languages) {
       datePublished: current.episode.date,
       duration: current.episode.durationIso,
       episodeNumber: current.episode.number,
+      image: absolute(cover),
       inLanguage: 'ru',
       partOfSeries: { '@type': 'PodcastSeries', name: '3 AImigo', url: href(lang, '') },
       sameAs: current.episode.media.map(({ url }) => url),
@@ -44,7 +46,7 @@ for (const lang of languages) {
         <meta property="og:title" content={current.title} />
         <meta property="og:description" content={current.description} />
         <meta property="og:url" content={href(lang, route)} />
-        <meta property="og:image" content={absolute(asset('cover.webp'))} />
+        <meta property="og:image" content={absolute(cover)} />
         <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : 'en_GB'} />
         <meta name="twitter:card" content="summary" />
         {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "topic": "t1",
+  "baseEpisodeHash": null,
+  "basePrepHash": "41c5de0fa651393dbf6c3979c9e272dfcb1da60fde35d4074467ee5b77418cc3",
+  "episode": {
+    "id": "3-aimigo-s1e13-agent-development-infrastructure",
+    "slug": "agent-development-infrastructure",
+    "season": 1,
+    "number": 13,
+    "date": "",
+    "duration": "",
+    "durationIso": "",
+    "title": {
+      "ru": "Инфраструктура агентной разработки",
+      "en": "Infrastructure for agent-driven development"
+    },
+    "intro": {
+      "en": [],
+      "ru": []
+    },
+    "topics": {
+      "en": [],
+      "ru": []
+    },
+    "media": []
+  },
+  "recordingSource": {
+    "kind": "transcript",
+    "path": ".private/transcripts/agent-development-infrastructure.txt"
+  }
+}

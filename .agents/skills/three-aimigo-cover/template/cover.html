@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>3 AImigo cover</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  :root { --cream: #fbf1e1; --gold: #f7b52a; --outline: #140611; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #000; overflow: hidden; }
+  .cover { position: relative; width: 1280px; height: 720px; overflow: hidden;
+    background: url("plate.png") 0 0 / 100% 100% no-repeat; }
+  /* The empty field inside the panel's dotted border of plate.png. */
+  .field { position: absolute; left: 237px; top: 228px; width: 805px; height: 98px;
+    display: flex; align-items: center; justify-content: center; padding: 0 14px; }
+  /* Square: sq/plate.png (the S1E7 square art, 1400x1400) and its panel. */
+  .square .cover { width: 1400px; height: 1400px; background-image: url("sq/plate.png"); }
+  .square .field { left: 258px; top: 435px; width: 883px; height: 157px; padding: 0 18px; }
+  .square .title { --o: 2.5px; --d: 1.9px; }
+  .title { font-family: "Roboto Condensed", "Arial Narrow", sans-serif; font-weight: 700;
+    color: var(--cream); text-align: center; line-height: 1; letter-spacing: 0.3px;
+    text-wrap: balance;
+    /* Dark outline + drop shadow, like the generated covers. */
+    --o: 2px; --d: 1.5px;
+    text-shadow:
+      var(--o) 0 0 var(--outline), calc(-1 * var(--o)) 0 0 var(--outline), 0 var(--o) 0 var(--outline), 0 calc(-1 * var(--o)) 0 var(--outline),
+      var(--d) var(--d) 0 var(--outline), calc(-1 * var(--d)) var(--d) 0 var(--outline), var(--d) calc(-1 * var(--d)) 0 var(--outline), calc(-1 * var(--d)) calc(-1 * var(--d)) 0 var(--outline),
+      0 4px 3px rgba(0, 0, 0, 0.65); }
+  /* Caps need a little more leading or a «Й» breve touches the line above. */
+  .title.caps { text-transform: uppercase; line-height: 1.14; }
+  .badge { color: var(--gold); font-weight: 800; margin-right: 0.28em; }
+  .nowrap { white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="cover" id="cover">
+  <div class="field" id="field"><div class="title" id="title"></div></div>
+</div>
+<script>
+  const data = window.COVER_DATA;
+  // Font-size ranges: one line [max, min], then two balanced lines [max, min].
+  const square = window.COVER_LAYOUT === "square";
+  const sizes = square ? { one: [80, 56], two: [74, 34] } : { one: [58, 40], two: [52, 24] };
+  if (square) document.body.classList.add("square");
+  const field = document.getElementById("field");
+  const title = document.getElementById("title");
+  if (data.caps) title.classList.add("caps");
+
+  // Hyphenated words («AI-изменений», «IT-собеседования») never break at the
+  // hyphen; one- and two-letter Russian words stick to the next word.
+  const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const text = data.title.replace(/(^|[ \t\n])([а-яёА-ЯЁ]{1,2})[ \t]+/g, "$1$2\u00a0");
+  // "\n" in the title forces the line break (e.g. right after a colon).
+  const words = (s) => s.split(/([ \t\u00a0]+)/).map((w) => (/\S-\S/.test(w) ? `<span class="nowrap">${esc(w)}</span>` : esc(w))).join("");
+  const body = text.split("\n").map((line) => words(line.trim())).join("<br>");
+  title.innerHTML = `<span class="badge nowrap">${esc(data.badge)}:</span>${body}`;
+
+  // The text may run a few px onto the dotted line with descenders, as on the
+  // generated covers; the height budget is the field plus 6 px.
+  const inner = () => ({ w: field.clientWidth - 28, h: field.clientHeight + 6 });
+  const lines = () => Math.round(title.getBoundingClientRect().height / parseFloat(getComputedStyle(title).lineHeight));
+  const fits = (maxLines) => {
+    const r = title.getBoundingClientRect();
+    return r.width <= inner().w + 0.5 && r.height <= inner().h + 0.5 && title.scrollWidth <= title.clientWidth + 0.5 && lines() <= maxLines;
+  };
+
+  // A failed font load must not hang the page: render.mjs checks the face
+  // status afterwards and reports a missing font explicitly.
+  document.fonts.load('700 40px "Roboto Condensed"', "Аб Ab").catch(() => []).then(() => document.fonts.ready).then(() => {
+    // One line at a large size when it fits; otherwise two balanced lines.
+    let size = sizes.one[0];
+    let mode = "one";
+    const setSize = (s) => { title.style.fontSize = `${s}px`; };
+    for (; size >= sizes.one[1]; size -= 1) { setSize(size); if (fits(1)) break; }
+    if (size < sizes.one[1]) {
+      mode = "two";
+      for (size = sizes.two[0]; size >= sizes.two[1]; size -= 1) { setSize(size); if (fits(2)) break; }
+      if (size < sizes.two[1]) mode = "overflow";
+    }
+    document.body.dataset.report = JSON.stringify({ size, mode, lines: lines() });
+    document.body.dataset.ready = "1";
+  });
+</script>
+</body>
+</html>

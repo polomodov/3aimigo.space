@@ -4,3 +4,10 @@ dist/
 .private/
 .env*
 .DS_Store
+*.tsbuildinfo
+production/**/*.mp3
+production/**/*.mp4
+production/**/*.wav
+production/**/*.m4a
+production/**/*.srt
+production/**/*.vtt

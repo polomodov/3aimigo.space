@@ -4,7 +4,9 @@ import { join } from 'node:path';
 
 const base = process.env.BASE_PATH || '/';
 const origin = new URL(process.env.SITE_ORIGIN || 'https://3aimigo.space').origin;
-const files = (await readdir('dist', { recursive: true })).filter((file) => file.endsWith('/index.html') || file === 'index.html');
+const entries = await readdir('dist', { recursive: true });
+assert.ok(!entries.some((file) => /(^|\/)(?:\.private|\.agents|production|docs)(?:\/|$)/.test(file)), 'Working materials must stay outside the website payload');
+const files = entries.filter((file) => file.endsWith('/index.html') || file === 'index.html');
 const sitemap = await readFile('dist/sitemap.xml', 'utf8');
 const canonicals = new Set();
 const checkedPaths = new Set();

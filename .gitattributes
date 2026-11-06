@@ -1,0 +1,4 @@
+.agents/skills/three-aimigo-cover/**/*.png filter=lfs diff=lfs merge=lfs -text
+.agents/skills/three-aimigo-cover/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+.agents/skills/three-aimigo-cover/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+.agents/skills/three-aimigo-cover/**/*.webp filter=lfs diff=lfs merge=lfs -text

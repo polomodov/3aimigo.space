@@ -1,0 +1,860 @@
+{
+  "auditedAt": "2026-10-06",
+  "description": "Archive of existing finished cover exports and identified published YouTube covers. Multiple historical versions are retained; this inventory does not select a current publishing version. Missing square exports are listed explicitly; none were fabricated.",
+  "files": [
+    {
+      "file": "3aimigo-6-sq.jpg",
+      "episodeNumber": 6,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 959360,
+      "sha256": "dab4773e2ad30a4e894ab212e59fb81778c498850548560ac431e495ec24aa70",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-6-sq.jpg"
+    },
+    {
+      "file": "3aimigo-7-sq.jpg",
+      "episodeNumber": 7,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 907590,
+      "sha256": "d17245702595adf9d8e807ed2baefab88c2095680ac0c2b51bdb2581701011b3",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-7-sq.jpg"
+    },
+    {
+      "file": "3aimigo-7-sq.png",
+      "episodeNumber": 7,
+      "layout": "square",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2604946,
+      "sha256": "3952128d2660aa793a57c0095b28ee6f2e2e370448a27e36da4670918f3335f5",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-7-sq.png"
+    },
+    {
+      "file": "3aimigo-s1e1.jpg",
+      "episodeNumber": 1,
+      "layout": "square",
+      "width": 2508,
+      "height": 2508,
+      "bytes": 2227598,
+      "sha256": "4e8de2a008372a5722ad572abcf2f0f26fd301e62fbdcabc278d3262a415483d",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e1.jpg"
+    },
+    {
+      "file": "3aimigo-s1e10-square.jpg",
+      "episodeNumber": 10,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 721726,
+      "sha256": "81f2e5a2e06e94f27af79e9e82b67885d05a9b9e300d0f0b56e62ab626573139",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e10-square.jpg"
+    },
+    {
+      "file": "3aimigo-s1e10-square.png",
+      "episodeNumber": 10,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3166409,
+      "sha256": "8adb976eb65ce783e5b144a5f8228c8eedcae2a6b9098ca13d25f23a048c773c",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e10-square.png"
+    },
+    {
+      "file": "3aimigo-s1e10.jpg",
+      "episodeNumber": 10,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 376305,
+      "sha256": "305ac58c446afc7400b0de22115367ecc55c10e27e3ae7873dec42c4837ed6fe",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e10.jpg"
+    },
+    {
+      "file": "3aimigo-s1e10.png",
+      "episodeNumber": 10,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1718063,
+      "sha256": "b09593e83e089255b23ee0760e996ebb57986de9216ce101c0e65af1797cd157",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e10.png"
+    },
+    {
+      "file": "3aimigo-s1e13-square.jpg",
+      "episodeNumber": 13,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 721177,
+      "sha256": "5cd8f13217744c863c910687e76b334582181acf576b8ea277d2c3c8532ae5a6",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e13-square.jpg"
+    },
+    {
+      "file": "3aimigo-s1e13-square.png",
+      "episodeNumber": 13,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3167734,
+      "sha256": "efe77219075b05956c181fe7893004a8df30cb93ad042a02a340481853114f38",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e13-square.png"
+    },
+    {
+      "file": "3aimigo-s1e13.jpg",
+      "episodeNumber": 13,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 371803,
+      "sha256": "08854359e96c8f7fe4d9d8186d9b1be78f3ef967a505d83966cd2d26d4a52ccd",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e13.jpg"
+    },
+    {
+      "file": "3aimigo-s1e13.png",
+      "episodeNumber": 13,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1710156,
+      "sha256": "1a68dcb56d66c4a3e46660ee032f2e6d743c741707c4675bfd79c6c3954e6cb6",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e13.png"
+    },
+    {
+      "file": "3aimigo-s1e2-square.jpg",
+      "episodeNumber": 2,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 942392,
+      "sha256": "2b3d7b942085952afcb21240675be41c2b31c6d530af52a3553fa5dd9232b3f7",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e2-square.jpg"
+    },
+    {
+      "file": "3aimigo-s1e2-square.png",
+      "episodeNumber": 2,
+      "layout": "square",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2802358,
+      "sha256": "8b8e2263b91daca6d7a954011d919ef2081e1c164eb2ac4427b6e74f7b9a73a6",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e2-square.png"
+    },
+    {
+      "file": "3aimigo-s1e2.jpg",
+      "episodeNumber": 2,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 832656,
+      "sha256": "7cc7910096f738c7163c2cb5e0467d89dca3e5f6d8c877334e8927eb1e8448ec",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e2.jpg"
+    },
+    {
+      "file": "3aimigo-s1e2.png",
+      "episodeNumber": 2,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2618295,
+      "sha256": "e7307306f3b976afbe05c99aa40f6a0dd69819cb050b368dcff456d3a993e4c2",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e2.png"
+    },
+    {
+      "file": "3aimigo-s1e3-sq.png",
+      "episodeNumber": 3,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3092990,
+      "sha256": "7a575c0f53f4eb4ac38bcdaef75a0eadfa7b2e2910a09ff64098d6539576aa7a",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e3-sq.png"
+    },
+    {
+      "file": "3aimigo-s1e3.jpg",
+      "episodeNumber": 3,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 844654,
+      "sha256": "86c3b738170f2c6d740360e1c4005b6f8d8a909f031f8bbe0fc9ba3669ed4cb6",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e3.jpg"
+    },
+    {
+      "file": "3aimigo-s1e3.png",
+      "episodeNumber": 3,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2677004,
+      "sha256": "a6616247fe84a21e4ac2d7a10a97082df939c257d5c2e393957c153b5bd2b51e",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e3.png"
+    },
+    {
+      "file": "3aimigo-s1e4-logo-square.jpg",
+      "episodeNumber": 4,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 933071,
+      "sha256": "23789f9cc1a7ebae0bc59b4e02e03859d4a22d403097e82074652eef2676d459",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e4-logo-square.jpg"
+    },
+    {
+      "file": "3aimigo-s1e4-logo-square.png",
+      "episodeNumber": 4,
+      "layout": "square",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2817786,
+      "sha256": "e3c8407aee42e58f3572c3cad07dd2b03ed4be2e76d5b2cb8332158386978838",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e4-logo-square.png"
+    },
+    {
+      "file": "3aimigo-s1e4-logo.jpg",
+      "episodeNumber": 4,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 828210,
+      "sha256": "a38db53cd2dc43fc25104e6118339aa244405b99cdbd3c7ba484bf7e32629de1",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e4-logo.jpg"
+    },
+    {
+      "file": "3aimigo-s1e4-logo.png",
+      "episodeNumber": 4,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2637625,
+      "sha256": "f1921bac210db3001ca25c4028c4c31c51e94b4ab73ac10fd90016f0cedd4384",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e4-logo.png"
+    },
+    {
+      "file": "3aimigo-s1e4.png",
+      "episodeNumber": 4,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2789851,
+      "sha256": "8e2fc98cf76b6ff5dbad328c922ce59231890625e06772e1e79ee587572e60a0",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e4.png"
+    },
+    {
+      "file": "3aimigo-s1e5-sq.jpg",
+      "episodeNumber": 5,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 913296,
+      "sha256": "e12d259e10a27059107fd1cffb18c7543db7a333fece6be3328902ff7138ed66",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e5-sq.jpg"
+    },
+    {
+      "file": "3aimigo-s1e5-sq.png",
+      "episodeNumber": 5,
+      "layout": "square",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2751593,
+      "sha256": "ace5279ea6d2877c51079cea41948e8bc2ee4c05ac82c7798a44988a33e4b871",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e5-sq.png"
+    },
+    {
+      "file": "3aimigo-s1e5.jpg",
+      "episodeNumber": 5,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 854421,
+      "sha256": "d691894bd0f9a18ae42ddfeb617cfe5e172781163c959ccbaf3dbfeb39f37ec5",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e5.jpg"
+    },
+    {
+      "file": "3aimigo-s1e5.png",
+      "episodeNumber": 5,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2648133,
+      "sha256": "502a8e6bfe346c4a5a135b904cca1606b29422397a6b00832d8a003effcec86c",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e5.png"
+    },
+    {
+      "file": "3aimigo-s1e6-square.png",
+      "episodeNumber": 6,
+      "layout": "square",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2708136,
+      "sha256": "755845ebf5ca6fd757e7badb0a3f338db030d5b4ec2011ec05ee390626127a52",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e6-square.png"
+    },
+    {
+      "file": "3aimigo-s1e6.jpg",
+      "episodeNumber": 6,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 832988,
+      "sha256": "2e8fc3835c6d5cb6ac92ac33dc6e3c4d701215771dc951aa10a3be853fa00557",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e6.jpg"
+    },
+    {
+      "file": "3aimigo-s1e6.png",
+      "episodeNumber": 6,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2581228,
+      "sha256": "39d0049a4fbbf3f5826c8e2f62f96b465714c5e2479f1ab1c32a601e54c033c8",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e6.png"
+    },
+    {
+      "file": "3aimigo-s1e7.jpg",
+      "episodeNumber": 7,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 758124,
+      "sha256": "b46127b1e17a405fef05dfdf5fbea38ae9d8b70323897c42ef8de7b7bcda505f",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e7.jpg"
+    },
+    {
+      "file": "3aimigo-s1e7.png",
+      "episodeNumber": 7,
+      "layout": "landscape",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2506447,
+      "sha256": "d206537e0a13063929f9ca41e3b4ce7165bbc79b6a774305eeeab0b7502d603f",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e7.png"
+    },
+    {
+      "file": "3aimigo-s1e8-square.jpg",
+      "episodeNumber": 8,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 1019394,
+      "sha256": "339dd2aba6a6c6641e48c42bce1cf17aa32d103edc049ea90e1206d037db877e",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e8-square.jpg"
+    },
+    {
+      "file": "3aimigo-s1e8-square.png",
+      "episodeNumber": 8,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3160769,
+      "sha256": "c80aac6e922102b73bdc2f7e3fa675c4c568a82a6f454472751ca6e7add7462e",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e8-square.png"
+    },
+    {
+      "file": "3aimigo-s1e8.jpg",
+      "episodeNumber": 8,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 474639,
+      "sha256": "84498629066c0faa69059e8863a5c5770279c3e814dbdf722f7c37a289c87084",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e8.jpg"
+    },
+    {
+      "file": "3aimigo-s1e8.png",
+      "episodeNumber": 8,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1708265,
+      "sha256": "86a39b2e8d10d7721a6380045aa091171920b2ab66887acd6de1a2c2f1b1b76b",
+      "source": "existing-local-export",
+      "sourceFileName": "3aimigo-s1e8.png"
+    },
+    {
+      "file": "s1e1-square.jpg",
+      "episodeNumber": 1,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 1017474,
+      "sha256": "2e656e6243b350b0ed48bba2b6253bd6fce848455ac36c25d414aa4923dfa1b9",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e1-square.jpg"
+    },
+    {
+      "file": "s1e1-square.png",
+      "episodeNumber": 1,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3161593,
+      "sha256": "ea327a074fa14a115ef1147fba91b5e74cdaf2f759389100374fc001e8e8fd18",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e1-square.png"
+    },
+    {
+      "file": "s1e1.jpg",
+      "episodeNumber": 1,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 470718,
+      "sha256": "7432721b0a89e39bceda1d923982b6fbd2259cd2ffdc131bde7b2141f53f7f5d",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e1.jpg"
+    },
+    {
+      "file": "s1e1.png",
+      "episodeNumber": 1,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1701108,
+      "sha256": "00ed9a0932afcbe4d27440f194d60524d97c1c4d236d0990f6d388d3bae55e1c",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e1.png"
+    },
+    {
+      "file": "s1e2-square.jpg",
+      "episodeNumber": 2,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 1024369,
+      "sha256": "ddfec91697adccd5b5436d807d4f6e321b1249f2f9da9598291d62b11d97aba4",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e2-square.jpg"
+    },
+    {
+      "file": "s1e2-square.png",
+      "episodeNumber": 2,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3170007,
+      "sha256": "1a3feeee257852f127110c880af1b13e958fbc3337c04907c2459bab8ce4cb74",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e2-square.png"
+    },
+    {
+      "file": "s1e2.jpg",
+      "episodeNumber": 2,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 483796,
+      "sha256": "5bc276d1ce4578b4103dee0d057925f4135bf05a707e085a3f349281fa6011b1",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e2.jpg"
+    },
+    {
+      "file": "s1e2.png",
+      "episodeNumber": 2,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1720309,
+      "sha256": "5aafbfb9343969ad401cf436a6c150ee1ba4bb0a77812baf7d82658b530ba415",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e2.png"
+    },
+    {
+      "file": "s1e3-square.jpg",
+      "episodeNumber": 3,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 1018326,
+      "sha256": "50cd54beb5518fa207dc53756531e50f319264c4746831f999b8e069b743655b",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e3-square.jpg"
+    },
+    {
+      "file": "s1e3-square.png",
+      "episodeNumber": 3,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3163617,
+      "sha256": "64bca57abd9a586ef3cfeb00de2bcc1ca5ad7ba665303ea3f034863e70478482",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e3-square.png"
+    },
+    {
+      "file": "s1e3.jpg",
+      "episodeNumber": 3,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 471630,
+      "sha256": "32c478ef59df72035cce4ad93ee94fdfcb95971fdfd641f187ad314f4a98d66d",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e3.jpg"
+    },
+    {
+      "file": "s1e3.png",
+      "episodeNumber": 3,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1701924,
+      "sha256": "6dcf75ee0e0a2a16810f0e390bc657397bbf2967e2986cbb035cc28cfc3402a5",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e3.png"
+    },
+    {
+      "file": "s1e4-square.jpg",
+      "episodeNumber": 4,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 1024916,
+      "sha256": "505e8a063f50339308fc4ccb390a248435ccbac628ac5df3d513fcf6d512bb22",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e4-square.jpg"
+    },
+    {
+      "file": "s1e4-square.png",
+      "episodeNumber": 4,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3170183,
+      "sha256": "958744d2fb1fe8257bb26dc562a7553def878684e4967a87b103d162904a3451",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e4-square.png"
+    },
+    {
+      "file": "s1e4.jpg",
+      "episodeNumber": 4,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 481656,
+      "sha256": "3a97f33afeb4f0e86cdadc851c172a164551c6ec9b9c58db7862ea7b6323a583",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e4.jpg"
+    },
+    {
+      "file": "s1e4.png",
+      "episodeNumber": 4,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1717901,
+      "sha256": "f204fa3636a40fb0d280d6f16599a521368d3fb497dd7184bc846c311b2cb3ba",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e4.png"
+    },
+    {
+      "file": "s1e5-square.jpg",
+      "episodeNumber": 5,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 1028141,
+      "sha256": "b91048d26833d145931c380ac629e7772f31342e1ef339691394a8e98804a997",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e5-square.jpg"
+    },
+    {
+      "file": "s1e5-square.png",
+      "episodeNumber": 5,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3171570,
+      "sha256": "3497204bed59801e8c12afda634e39fb89d9e60ae0d300cf8261093e36430e3b",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e5-square.png"
+    },
+    {
+      "file": "s1e5.jpg",
+      "episodeNumber": 5,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 483463,
+      "sha256": "6ff729568641bd12942884e266a1f6c437612c96a6d200865e52868f23d4ef2e",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e5.jpg"
+    },
+    {
+      "file": "s1e5.png",
+      "episodeNumber": 5,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1720722,
+      "sha256": "014f9c3d2e5c7bfa6be1d27a3019d3ee3151d09b8cbdac884fb0ad595792fe7d",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e5.png"
+    },
+    {
+      "file": "s1e6-square.jpg",
+      "episodeNumber": 6,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 1029232,
+      "sha256": "05ae43698fb56aa773efc0c0778fbcc9b6c7ea2424f59b1023ede0f03cf790d5",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e6-square.jpg"
+    },
+    {
+      "file": "s1e6-square.png",
+      "episodeNumber": 6,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3166823,
+      "sha256": "f9453e784d38b625903325a9b39ebb4576544efb9ded6c31d72eb060fd32d62f",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e6-square.png"
+    },
+    {
+      "file": "s1e6.jpg",
+      "episodeNumber": 6,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 485168,
+      "sha256": "924d499398f45ba3077a91c8a2aa007b6581fe48867c20d5e972c3dafacb36bf",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e6.jpg"
+    },
+    {
+      "file": "s1e6.png",
+      "episodeNumber": 6,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1719080,
+      "sha256": "a8d32f11cfb895198f66db944b63908be5f97869710dab421fa7a8b812eac524",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e6.png"
+    },
+    {
+      "file": "s1e7-square.jpg",
+      "episodeNumber": 7,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 1020471,
+      "sha256": "feb20fc0802352dc91a7f731f464149fd050bc68c5bc20cf67041780820b8e88",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e7-square.jpg"
+    },
+    {
+      "file": "s1e7-square.png",
+      "episodeNumber": 7,
+      "layout": "square",
+      "width": 1400,
+      "height": 1400,
+      "bytes": 3166121,
+      "sha256": "33bfb85e72d2bd23af0df0c90b5d4c763646cea117d3783bd7cec3056237acb7",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e7-square.png"
+    },
+    {
+      "file": "s1e7.jpg",
+      "episodeNumber": 7,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 471088,
+      "sha256": "f23ac32bad45ca36cdef9d9d7d47ad51a28ae46ac22b64b96d9f987db46d5b62",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e7.jpg"
+    },
+    {
+      "file": "s1e7.png",
+      "episodeNumber": 7,
+      "layout": "landscape",
+      "width": 1280,
+      "height": 720,
+      "bytes": 1701993,
+      "sha256": "a348e631150294ddafe5f7594c2101191358a50ef5fa556ce1f5f74ca8151301",
+      "source": "existing-local-export",
+      "sourceFileName": "s1e7.png"
+    }
+  ],
+  "publishedEpisodeCoverage": [
+    {
+      "id": "3-aimigo-s1e8-ai-native-what-it-means-for-a-company",
+      "slug": "ai-native-what-it-means-for-a-company",
+      "number": 8,
+      "title": "AI-native: что это значит для компании?",
+      "landscape": [
+        "3aimigo-s1e8.jpg",
+        "3aimigo-s1e8.png"
+      ],
+      "square": [
+        "3aimigo-s1e8-square.jpg",
+        "3aimigo-s1e8-square.png"
+      ]
+    },
+    {
+      "id": "3-aimigo-s1e7-september-2026-ai-digest",
+      "slug": "september-2026-ai-digest",
+      "number": 7,
+      "title": "AI-дайджест сентября 2026: генерация дешевеет, проверка дорожает",
+      "landscape": [
+        "3aimigo-s1e7.jpg",
+        "3aimigo-s1e7.png",
+        "s1e7.jpg",
+        "s1e7.png"
+      ],
+      "square": [
+        "3aimigo-7-sq.jpg",
+        "3aimigo-7-sq.png",
+        "s1e7-square.jpg",
+        "s1e7-square.png"
+      ]
+    },
+    {
+      "id": "3-aimigo-s1e6-staying-afloat-in-the-ai-change-stream",
+      "slug": "staying-afloat-in-the-ai-change-stream",
+      "number": 6,
+      "title": "Как не утонуть в потоке AI-изменений и сохранить силы",
+      "landscape": [
+        "3aimigo-s1e6.jpg",
+        "3aimigo-s1e6.png",
+        "s1e6.jpg",
+        "s1e6.png"
+      ],
+      "square": [
+        "3aimigo-6-sq.jpg",
+        "3aimigo-s1e6-square.png",
+        "s1e6-square.jpg",
+        "s1e6-square.png"
+      ]
+    },
+    {
+      "id": "3-aimigo-s1e5-junior-without-easy-tasks-entering-it-in-the-ai-era",
+      "slug": "junior-without-easy-tasks-entering-it-in-the-ai-era",
+      "number": 5,
+      "title": "Джун без простых задач. Как войти в IT в эпоху AI?",
+      "landscape": [
+        "3aimigo-s1e5.jpg",
+        "3aimigo-s1e5.png",
+        "s1e5.jpg",
+        "s1e5.png"
+      ],
+      "square": [
+        "3aimigo-s1e5-sq.jpg",
+        "3aimigo-s1e5-sq.png",
+        "s1e5-square.jpg",
+        "s1e5-square.png"
+      ]
+    },
+    {
+      "id": "3-aimigo-s1e4-ai-hires-ai-how-do-we-redesign-tech-interviews",
+      "slug": "ai-hires-ai-how-do-we-redesign-tech-interviews",
+      "number": 4,
+      "title": "AI нанимает AI. Как пересобрать IT-собеседования?",
+      "landscape": [
+        "3aimigo-s1e4-logo.jpg",
+        "3aimigo-s1e4-logo.png",
+        "3aimigo-s1e4.png",
+        "s1e4.jpg",
+        "s1e4.png"
+      ],
+      "square": [
+        "3aimigo-s1e4-logo-square.jpg",
+        "3aimigo-s1e4-logo-square.png",
+        "s1e4-square.jpg",
+        "s1e4-square.png"
+      ]
+    },
+    {
+      "id": "3-aimigo-s1e3-august-2026-ai-digest",
+      "slug": "august-2026-ai-digest",
+      "number": 3,
+      "title": "AI-дайджест августа 2026: AI дешевеет, внедрение усложняется",
+      "landscape": [
+        "3aimigo-s1e3.jpg",
+        "3aimigo-s1e3.png",
+        "s1e3.jpg",
+        "s1e3.png"
+      ],
+      "square": [
+        "3aimigo-s1e3-sq.png",
+        "s1e3-square.jpg",
+        "s1e3-square.png"
+      ]
+    },
+    {
+      "id": "3-aimigo-s1e2-ai-writes-more-code-why-delivery-does-not-speed-up",
+      "slug": "ai-writes-more-code-why-delivery-does-not-speed-up",
+      "number": 2,
+      "title": "AI пишет больше кода. Почему поставка не ускоряется?",
+      "landscape": [
+        "3aimigo-s1e2.jpg",
+        "3aimigo-s1e2.png",
+        "s1e2.jpg",
+        "s1e2.png"
+      ],
+      "square": [
+        "3aimigo-s1e2-square.png",
+        "3aimigo-s1e2-square.jpg",
+        "s1e2-square.jpg",
+        "s1e2-square.png"
+      ]
+    },
+    {
+      "id": "3-aimigo-s1e1-ai-in-software-development-now",
+      "slug": "ai-in-software-development-now",
+      "number": 1,
+      "title": "Где мы сейчас с AI в разработке",
+      "landscape": [
+        "s1e1.jpg",
+        "s1e1.png"
+      ],
+      "square": [
+        "3aimigo-s1e1.jpg",
+        "s1e1-square.jpg",
+        "s1e1-square.png"
+      ]
+    }
+  ]
+}

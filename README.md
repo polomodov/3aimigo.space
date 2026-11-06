@@ -1,10 +1,10 @@
 # 3 AImigo
 
-A bilingual podcast site about AI in engineering. Alexander Polomodov, Evgeny Sergeev, and Aleksey Litvinov compare hands-on practice, engineering leadership, and architecture.
+A bilingual podcast about AI in engineering. Alexander Polomodov, Evgeny Sergeev, and Aleksey Litvinov compare hands-on practice, engineering leadership, and architecture.
 
 [English](https://3aimigo.space/) · [Русский](https://3aimigo.space/ru/) · [Original archive](https://polomodov.tech/3-aimigo/)
 
-The site includes episode pages, summaries, longreads and slides, an interactive topic map, and public briefs for upcoming discussions. The original recordings are in Russian. English is the default site language; every Russian page lives under `/ru/`.
+This repository owns the website and the episode preparation/publication workflow: research, discussion outlines, bilingual announcements, covers, transcript-based summaries and release checks. English is the primary site language; Russian pages use `/ru/`. The original recordings are in Russian.
 
 ## Work locally
 
@@ -18,18 +18,60 @@ npm run build
 npm run preview
 ```
 
-React, TypeScript and Vite generate a static HTML page for every route and locale. The podcast map is interactive with a small client script; the archive, summaries and preparation pages render without JavaScript. The build verifies local URLs and language metadata.
+React, TypeScript and Vite generate static HTML for every route and locale. Episodes, summaries and preparation pages render without JavaScript. The topic map is interactive. Builds validate the public content, local links, language metadata and sitemap.
 
-## Edit episodes and prep
+## Prepare and publish episodes
 
-- [content/podcast.json](content/podcast.json) holds the public episode archive, summaries and topic map. It is seeded from the matching revision of polomodov.tech recorded in the file. Refresh that snapshot with `npm run import:polomodov -- /path/to/polomodov YYYY-MM-DD` when importing updates from upstream. Review the generated diff; the importer replaces the whole snapshot and does not touch prep briefs.
-- For a release authored here, add both languages, official recording links, and a topic node. If the topic was already planned, add the new episode ID to that node to retain its links and connections.
-- [content/prep/](content/prep/) holds the published preparation briefs. Use the [template](content/prep/TEMPLATE.md) to prepare the next episode. Keep private research, unannounced guest details and recordings in a separate private workspace; files and history in this repository are public.
+Start with the [episode workflow](docs/episode-workflow.md) and [editorial archive](docs/README.md). The [S1E13 working package](production/episodes/agent-development-infrastructure/) is already prepared, with its real public brief and references to the migrated infrastructure research. It remains an unreleased draft.
+
+```sh
+# Create a new package using a free topic from content/podcast.json.
+npm run episode -- prepare --slug your-episode --topic TOPIC_ID --number NUMBER --season 1
+
+# Publish a reviewed bilingual brief without releasing a recording.
+npm run episode -- publish-prep --slug your-episode
+
+# After recording, edit episode.json and add its local transcript under .private/.
+npm run episode -- check --slug your-episode --date YYYY-MM-DD
+npm run episode -- publish --slug your-episode --date YYYY-MM-DD --reviewed
+npm test
+npm run build
+```
+
+Replace example values with the actual slug, topic, number and release date. `publish` applies a reviewed release to the local registry and updates the same topic-map node. A retry is safe; conflicting drafts, incomplete bilingual summaries, missing source text, future releases and channel-level media links are rejected. Review the diff, then commit and push to deploy. The commands do not upload recordings or send announcements.
+
+- `production/episodes/<slug>/` holds the editable episode, brief, research, outline and EN/RU announcement copy.
+- `content/podcast.json` is the canonical published registry, summaries and topic map. `content/prep/*.json` holds public preparation briefs; see the [brief template](content/prep/TEMPLATE.md).
+- `docs/research/` contains the migrated 13-topic package and supporting research. [Migration records](docs/migration/) preserve the source revision and hashes; historical evidence retains its original dates.
+- `.agents/skills/` contains the local `create-podcast-episode`, `create-talk-summary` and `three-aimigo-cover` workflows, also linked for Codex and Claude Code.
+- `.private/` is ignored. Keep raw recordings, transcripts, credentials and private guest details there. All tracked preparation and Git history are public; working files are not automatically website pages.
+
+The legacy importer is only a comparison tool:
+
+```sh
+npm run import:polomodov -- /path/to/polomodov YYYY-MM-DD
+```
+
+It writes a new `.private/imports/polomodov-YYYY-MM-DD.json` candidate, refuses existing output and cannot replace the canonical registry. Review and selectively merge changes so locally authored episodes remain intact.
+
+## Render covers
+
+The original artwork, fonts, recipes and historical exports are bundled with the [cover skill](.agents/skills/three-aimigo-cover/SKILL.md). Images use Git LFS; hydrate the templates and install the browser once:
+
+```sh
+git lfs install
+git lfs pull --include=".agents/skills/three-aimigo-cover/template/**" --exclude=""
+npx playwright install chromium
+npm run cover:render -- path/to/recipe.json /tmp/3aimigo-cover
+npm run test:cover-render
+```
+
+English recipes export landscape covers; Russian recipes support landscape and square. Rendering checks artwork/fonts and text overflow. Inspect the output, then add selected site images under `public/covers/` and reference them in the bilingual episode `covers` field. Historical RU S1E1–13 and EN S1E1–8 recipes are preserved; absent translations were not invented.
 
 ## Deploy
 
-GitHub Actions checks pull requests and publishes `main` to GitHub Pages at `https://3aimigo.space/`. The repository's Actions variables set `SITE_ORIGIN=https://3aimigo.space` and `BASE_PATH=/` for builds.
+GitHub Actions runs installation, a dependency audit, tests and the production build. Pushing `main` publishes to GitHub Pages at `https://3aimigo.space/`. Actions variables set `SITE_ORIGIN=https://3aimigo.space` and `BASE_PATH=/`.
 
-Cloudflare provides DNS for the domain. The apex uses the GitHub Pages A and AAAA records, and `www` points to `polomodov.github.io` via CNAME. These records use DNS only. GitHub Pages serves HTTPS and redirects `www` to the apex. Keep the GitHub domain verification TXT record in Cloudflare.
+Cloudflare provides DNS. The apex uses GitHub Pages A and AAAA records; `www` points to `polomodov.github.io` via CNAME. Records use DNS only. GitHub Pages serves HTTPS and redirects `www` to the apex. Keep the GitHub domain verification TXT record in Cloudflare.
 
-Fonts and their licenses are in [public/fonts/](public/fonts/).
+Fonts and licenses are in [public/fonts/](public/fonts/); cover fonts have their own bundled OFL license.

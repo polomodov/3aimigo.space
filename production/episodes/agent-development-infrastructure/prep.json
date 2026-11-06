@@ -1,0 +1,29 @@
+{
+  "slug": "agent-development-infrastructure",
+  "topic": "t1",
+  "source": "/2026-10-16-agent-development-infrastructure",
+  "en": {
+    "title": "Infrastructure for agent-driven development",
+    "description": "Five questions to take into the discussion about what changes when thousands of agents prepare changes.",
+    "intro": "Give several tasks to agents in the evening. By morning you have proposed changes, test results and new questions. Who checks the work, allows a merge or stops a dangerous action? What happens when thousands of agents are doing this at once?",
+    "questions": [
+      "How do you control the flow of work and keep its history when an agent fails?",
+      "What happens to CI, version control and merge queues as the number of attempts grows?",
+      "How do you verify the result and check the verifier itself?",
+      "How do you grant and revoke an agent’s permissions?",
+      "How do you calculate the cost of an accepted change, including failed attempts, checks and rollbacks?"
+    ]
+  },
+  "ru": {
+    "title": "Инфраструктура агентной разработки",
+    "description": "Пять вопросов к разговору о том, как меняется инфраструктура разработки, когда изменения готовят тысячи агентов.",
+    "intro": "Вечером оставляешь агентам несколько задач. Утром получаешь изменения, результаты тестов и новые вопросы. Кто проверит результат, разрешит слияние и остановит опасное действие? А если агентов тысячи?",
+    "questions": [
+      "Как дозировать поток задач и сохранять историю после сбоя агента?",
+      "Что происходит с CI, контролем версий и очередями слияния, когда попыток становится больше?",
+      "Как проверить результат — и самого проверяющего?",
+      "Как выдавать и отзывать полномочия агентов?",
+      "Как считать стоимость принятого изменения с учётом неудачных попыток, проверок и откатов?"
+    ]
+  }
+}

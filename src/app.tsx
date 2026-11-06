@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { asset, episodes, formatDate, map, original, pathFor, preps, series, type Episode, type Lang, type Prep } from './data';
+import { asset, episodePrep, episodes, formatDate, map, materialHref, original, pathFor, prepEpisode, preps, series, type Episode, type Lang, type Prep } from './data';
 import { TopicMap } from './topic-map';
 
 const github = 'https://github.com/polomodov/3aimigo.space';
@@ -9,13 +9,13 @@ const labels = {
     title: 'AI in engineering, from three perspectives',
     hero: 'How does AI change the way we build software, run engineering teams, and design systems? Three hosts compare what works in practice and what still needs testing.',
     show: 'The podcast', latest: 'Latest episodes', archive: 'All episodes', browse: 'Explore the topic map',
-    next: 'In preparation', readPrep: 'Read the briefing', hosts: 'The hosts',
+    next: 'In preparation', released: 'Episode published', readPrep: 'Read the briefing', hosts: 'The hosts', participants: 'In this episode',
     episode: 'Episode', season: 'Season', watch: 'Watch or listen', audio: 'Original recordings in Russian',
     summary: 'Episode summary', longread: 'Read the longread', slides: 'View the slides', sources: 'Sources',
     notes: 'Key takeaways', questions: 'Questions for the discussion', reading: 'Background reading',
     details: 'Episode details', open: 'Open episode', basedOn: 'Originally published on polomodov.tech',
-    materialsLead: 'Read the episode summaries and find the longreads and slides that go with them.',
-    prepLead: 'Read the questions and background material the hosts are bringing to upcoming discussions.',
+    materialsLead: 'Read the episode summaries and find the briefings, sources, longreads and slides that go with them.',
+    prepLead: 'Read the briefings, questions and sources for upcoming discussions and published episodes.',
     episodeLead: 'Browse the archive, from engineering delivery and hiring to agent autonomy and the monthly AI digests.',
     mapLead: 'Follow the connections between questions we have discussed and topics we want to cover next.',
     mapNote: 'The order and dates of planned topics may change.',
@@ -27,13 +27,13 @@ const labels = {
     title: 'AI в инженерии: три точки зрения',
     hero: 'Как AI меняет разработку, работу инженерных команд и архитектуру систем? Три ведущих сравнивают, что уже работает на практике, а что ещё стоит проверить.',
     show: 'О подкасте', latest: 'Последние выпуски', archive: 'Все выпуски', browse: 'Открыть карту тем',
-    next: 'Готовим выпуск', readPrep: 'К подготовке', hosts: 'Ведущие',
+    next: 'Готовим выпуск', released: 'Выпуск опубликован', readPrep: 'К подготовке', hosts: 'Ведущие', participants: 'Участники выпуска',
     episode: 'Выпуск', season: 'Сезон', watch: 'Смотреть или слушать', audio: 'Записи на русском языке',
     summary: 'Конспект выпуска', longread: 'Читать лонгрид', slides: 'Открыть слайды', sources: 'Источники',
     notes: 'Главные выводы', questions: 'Вопросы к обсуждению', reading: 'Почитать перед выпуском',
     details: 'Страница выпуска', open: 'К выпуску', basedOn: 'Впервые опубликовано на polomodov.tech',
-    materialsLead: 'Здесь собраны конспекты выпусков, лонгриды и слайды.',
-    prepLead: 'Вопросы, которые ведущие готовят к следующим выпускам, и материалы для чтения перед эфиром.',
+    materialsLead: 'Здесь собраны конспекты выпусков, подготовка, источники, лонгриды и слайды.',
+    prepLead: 'Подготовка, вопросы и источники для следующих обсуждений и уже опубликованных выпусков.',
     episodeLead: 'Архив подкаста: от поставки и найма до автономности агентов и ежемесячных AI-дайджестов.',
     mapLead: 'Посмотрите, как связаны вопросы, которые мы уже обсудили, и темы, к которым хотим вернуться.',
     mapNote: 'Порядок и сроки выхода запланированных тем могут измениться.',
@@ -114,6 +114,7 @@ function EpisodeCard({ episode, lang, heading: Title = 'h3' }: { episode: Episod
 
 function Home({ lang }: { lang: Lang }) {
   const t = labels[lang];
+  const nextPrep = preps.find((prep) => !prepEpisode(prep));
   return <>
     <section className="hero">
       <div>
@@ -129,9 +130,9 @@ function Home({ lang }: { lang: Lang }) {
       <div className="section-heading"><h2>{t.latest}</h2><a className="text-link" href={pathFor(lang, 'episodes')}>{t.archive} →</a></div>
       <div className="card-grid">{episodes.slice(0, 3).map((episode) => <EpisodeCard key={episode.id} episode={episode} lang={lang} />)}</div>
     </section>
-    {preps[0] && <section className="section panel feature">
-      <div><p className="kicker warm">{t.next}</p><h2>{preps[0][lang].title}</h2><p>{preps[0][lang].description}</p></div>
-      <Button href={pathFor(lang, prepRoute(preps[0]))}>{t.readPrep} →</Button>
+    {nextPrep && <section className="section panel feature">
+      <div><p className="kicker warm">{t.next}</p><h2>{nextPrep[lang].title}</h2><p>{nextPrep[lang].description}</p></div>
+      <Button href={pathFor(lang, prepRoute(nextPrep))}>{t.readPrep} →</Button>
     </section>}
     <section className="section">
       <h2>{t.hosts}</h2>
@@ -146,7 +147,7 @@ function Home({ lang }: { lang: Lang }) {
 function Archive({ lang }: { lang: Lang }) {
   const t = labels[lang];
   return <>
-    <Heading kicker={`3 AImigo · ${t.season} 1`} title={t.episodes} lead={t.episodeLead} />
+    <Heading kicker="3 AImigo" title={t.episodes} lead={t.episodeLead} />
     <section aria-label={t.archive} className="card-grid archive">
       {episodes.map((episode) => <EpisodeCard key={episode.id} episode={episode} lang={lang} heading="h2" />)}
     </section>
@@ -155,10 +156,15 @@ function Archive({ lang }: { lang: Lang }) {
 
 function MaterialLinks({ episode, lang, showSummary = true }: { episode: Episode; lang: Lang; showSummary?: boolean }) {
   const t = labels[lang];
+  const prep = episodePrep(episode);
   return <div className="actions">
     {showSummary && episode.summary && <Button href={pathFor(lang, summaryRoute(episode))}>{t.summary} →</Button>}
     {episode.longreadPath && <Button href={original(episode.longreadPath, lang)}>{t.longread} ↗</Button>}
     {episode.deckPath && <Button href={original(episode.deckPath, lang)}>{t.slides} ↗</Button>}
+    {episode.materials?.map(({ label, url }) => <Button key={url[lang] + label[lang]} href={materialHref(url[lang])}>
+      {label[lang]} {url[lang].startsWith('/') ? '→' : '↗'}
+    </Button>)}
+    {prep && <Button href={pathFor(lang, prepRoute(prep))}>{t.readPrep} →</Button>}
   </div>;
 }
 
@@ -173,16 +179,23 @@ function EpisodePage({ episode, lang }: { episode: Episode; lang: Lang }) {
     <Heading kicker={`3 AImigo · ${episodeNumber(episode)}`} title={episode.title[lang]} lead={episode.intro[lang][0]}>
       <p className="kicker muted"><time dateTime={episode.date}>{formatDate(episode.date, lang)}</time>{episode.durationIso && <> · <time dateTime={episode.durationIso}>{episode.duration}</time></>}</p>
     </Heading>
+    {episode.covers && <img className="episode-cover" src={asset(episode.covers[lang])} alt={episode.title[lang]} />}
     <section className="panel player">
       <h2>{t.watch}</h2><p className="muted">{t.audio}</p><MediaLinks media={episode.media} primary />
     </section>
     <section className="prose">{episode.intro[lang].slice(1).map((p) => <p key={p}>{p}</p>)}
       <ul className="tags">{episode.topics[lang].map((topic) => <li key={topic}>{topic}</li>)}</ul>
     </section>
+    {!!episode.participants?.length && <section className="section"><h2>{t.participants}</h2>
+      <ul className="participant-list">{episode.participants.map((participant) => <li key={participant.name[lang]}>
+        <h3>{participant.url ? <a href={participant.url}>{participant.name[lang]} ↗</a> : participant.name[lang]}</h3>
+        <p className="muted">{participant.role[lang]}</p>
+      </li>)}</ul>
+    </section>}
     <section className="section"><h2>{t.materials}</h2><MaterialLinks episode={episode} lang={lang} />
       <div className="actions secondary-links">
         {topic && <a className="text-link" href={pathFor(lang, 'topic-map') + '#' + topic.id}>{t.onMap} →</a>}
-        <a className="text-link" href={original(episode.originalPath, lang)}>{t.basedOn} ↗</a>
+        {episode.originalPath && <a className="text-link" href={original(episode.originalPath, lang)}>{t.basedOn} ↗</a>}
       </div>
     </section>
     <nav className="episode-nav" aria-label={t.episodes}>
@@ -204,9 +217,9 @@ function SummaryPage({ episode, lang }: { episode: Episode; lang: Lang }) {
         {section.paragraphs.map((p) => <p key={p}>{p}</p>)}</section>)}
       <section><h2>{t.notes}</h2><ul>{summary.takeaways.map((p) => <li key={p}>{p}</li>)}</ul></section>
       {summary.sources.length > 0 && <section><h2>{t.sources}</h2><ul>{summary.sources.map(({ url, label }) =>
-        <li key={url + label}><a href={url}>{label} ↗</a></li>)}</ul></section>}
+        <li key={url + label}><a href={materialHref(url)}>{label} {url.startsWith('/') ? '→' : '↗'}</a></li>)}</ul></section>}
     </article>
-    <a className="text-link" href={original(episode.originalPath + '/transcript', lang)}>{t.basedOn} ↗</a>
+    {episode.originalPath && <a className="text-link" href={original(episode.originalPath + '/transcript', lang)}>{t.basedOn} ↗</a>}
   </div>;
 }
 
@@ -214,7 +227,7 @@ function Materials({ lang }: { lang: Lang }) {
   const t = labels[lang];
   return <>
     <Heading kicker="3 AImigo" title={t.materials} lead={t.materialsLead} />
-    <div className="rows">{episodes.filter((episode) => episode.summary || episode.longreadPath || episode.deckPath).map((episode) =>
+    <div className="rows">{episodes.filter((episode) => episode.summary || episode.longreadPath || episode.deckPath || episode.materials?.length || episodePrep(episode)).map((episode) =>
       <article key={episode.id} className="resource-row">
         <div><EpisodeMeta episode={episode} lang={lang} /><h2><a href={pathFor(lang, episodeRoute(episode))}>{episode.title[lang]}</a></h2></div>
         <MaterialLinks episode={episode} lang={lang} />
@@ -226,24 +239,44 @@ function PrepIndex({ lang }: { lang: Lang }) {
   const t = labels[lang];
   return <>
     <Heading kicker="3 AImigo" title={t.prep} lead={t.prepLead} />
-    <div className="card-grid">{preps.map((prep) => <article className="panel episode-card" key={prep.slug}>
-      <p className="kicker warm">{t.next}</p><h2><a href={pathFor(lang, prepRoute(prep))}>{prep[lang].title}</a></h2>
-      <p>{prep[lang].description}</p><a className="text-link" href={pathFor(lang, prepRoute(prep))}>{t.readPrep} →</a>
-    </article>)}</div>
+    <div className="card-grid">{preps.map((prep) => {
+      const episode = prepEpisode(prep);
+      return <article className="panel episode-card" key={prep.slug}>
+        <p className={'kicker ' + (episode ? 'signal' : 'warm')}>{episode ? t.released : t.next}</p>
+        <h2><a href={pathFor(lang, prepRoute(prep))}>{prep[lang].title}</a></h2>
+        <p>{prep[lang].description}</p>
+        <div className="actions"><a className="text-link" href={pathFor(lang, prepRoute(prep))}>{t.readPrep} →</a>
+          {episode && <a className="text-link" href={pathFor(lang, episodeRoute(episode))}>{t.episode} {episodeNumber(episode)} →</a>}
+        </div>
+      </article>;
+    })}</div>
   </>;
 }
 
 function PrepPage({ prep, lang }: { prep: Prep; lang: Lang }) {
   const t = labels[lang];
   const p = prep[lang];
+  const episode = prepEpisode(prep);
   return <div className="reading">
     <a className="back text-link" href={pathFor(lang, 'prep')}>← {t.prep}</a>
-    <Heading kicker={`3 AImigo · ${t.prep}`} title={p.title} lead={p.intro} />
-    <section className="prose"><h2>{t.questions}</h2><ol>{p.questions.map((q) => <li key={q}>{q}</li>)}</ol></section>
-    <section className="section"><h2>{t.reading}</h2><div className="actions">
-      <Button href={original(prep.source, lang)}>{t.longread} ↗</Button>
-      <Button href={pathFor(lang, 'topic-map') + '#' + prep.topic}>{t.onMap} →</Button>
-    </div></section>
+    <Heading kicker={`3 AImigo · ${t.prep}`} title={p.title} lead={p.intro}>
+      <p className={'kicker ' + (episode ? 'signal' : 'warm')}>{episode ? t.released : t.next}</p>
+    </Heading>
+    {episode && <aside className="panel source-note">
+      <a className="text-link" href={pathFor(lang, episodeRoute(episode))}>{episodeNumber(episode)} · {episode.title[lang]} →</a>
+    </aside>}
+    <article className="prose">
+      {p.sections?.map((section) => <section key={section.title}><h2>{section.title}</h2>
+        {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
+      <section><h2>{t.questions}</h2><ol>{p.questions.map((q) => <li key={q}>{q}</li>)}</ol></section>
+      {(prep.source || !!prep.sources?.length) && <section><h2>{t.reading}</h2><ul className="source-links">
+        {prep.source && <li><a href={original(prep.source, lang)}>{t.longread} ↗</a></li>}
+        {prep.sources?.map(({ label, url }) => <li key={url[lang] + label[lang]}>
+          <a href={materialHref(url[lang])}>{label[lang]} {url[lang].startsWith('/') ? '→' : '↗'}</a>
+        </li>)}
+      </ul></section>}
+    </article>
+    <div className="actions section"><Button href={pathFor(lang, 'topic-map') + '#' + prep.topic}>{t.onMap} →</Button></div>
   </div>;
 }
 

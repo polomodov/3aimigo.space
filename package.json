@@ -8,10 +8,14 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vite build --ssr src/prerender.tsx --outDir .ssg && node .ssg/prerender.js && node scripts/check-dist.mjs",
+    "build": "npm run check:content && vite build && vite build --ssr src/prerender.tsx --outDir .ssg && node .ssg/prerender.js && node scripts/check-dist.mjs",
     "preview": "vite preview",
     "test": "tsc --noEmit && node --test",
-    "import:polomodov": "node scripts/import-polomodov.mjs"
+    "import:polomodov": "node scripts/import-polomodov.mjs",
+    "episode": "node scripts/episode.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "cover:render": "node .agents/skills/three-aimigo-cover/scripts/render.mjs",
+    "test:cover-render": "node scripts/cover-render-smoke.mjs"
   },
   "dependencies": {
     "react": "19.3.1",
@@ -21,6 +25,8 @@
     "@types/node": "^24.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "playwright": "^1.62.0",
+    "sharp": "^0.35.5",
     "typescript": "~5.9.3",
     "vite": "8.3.6"
   }

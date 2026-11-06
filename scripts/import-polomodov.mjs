@@ -1,13 +1,16 @@
-import { readFile, writeFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { execFileSync } from 'node:child_process';
 
-const [checkout, day = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/London' }).format(new Date())] = process.argv.slice(2);
+const [checkout, day = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/London' }).format(new Date()), output] = process.argv.slice(2);
 if (!checkout || !/^\d{4}-\d{2}-\d{2}$/.test(day)) {
-  throw new Error('Usage: npm run import:polomodov -- /path/to/polomodov [YYYY-MM-DD]');
+  throw new Error('Usage: npm run import:polomodov -- /path/to/polomodov [YYYY-MM-DD] [candidate.json]');
 }
 const upstream = resolve(checkout);
+const root = fileURLToPath(new URL('../', import.meta.url));
+const candidate = resolve(root, output || `.private/imports/polomodov-${day}.json`);
+if (candidate === resolve(root, 'content/podcast.json')) throw new Error('Import creates a review candidate; it cannot replace the public registry.');
 const load = (file) => import(pathToFileURL(resolve(upstream, file)).href);
 const json = async (file) => JSON.parse(await readFile(resolve(upstream, file), 'utf8'));
 const { getPodcastSeriesById } = await load('src/data/podcastSeriesEpisodes.ts');
@@ -61,5 +64,6 @@ const result = {
     edges: TOPIC_MAP_EDGES.filter(({ from, to }) => nodeIds.has(from) && nodeIds.has(to)),
   },
 };
-await writeFile(new URL('../content/podcast.json', import.meta.url), JSON.stringify(result, null, 2) + '\n');
-console.log(`Imported ${episodes.length} episodes and ${nodes.length} topics from ${result.source.revision.slice(0, 8)}.`);
+await mkdir(dirname(candidate), { recursive: true });
+await writeFile(candidate, JSON.stringify(result, null, 2) + '\n', { flag: 'wx' });
+console.log(`Wrote review candidate ${candidate}: ${episodes.length} episodes and ${nodes.length} topics from ${result.source.revision.slice(0, 8)}.`);

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "migratedAt": "2026-11-06",
+  "sourceRepository": "https://github.com/polomodov/polomodov",
+  "sourceRevision": "50001bbb27a97a18f29afc32f51882bb1c109b19",
+  "policy": "Historical Markdown is copied byte-for-byte. No raw recording or transcript is copied. Research cutoff dates and old-project validation reports remain historical.",
+  "files": [
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/README.md",
+      "sha256": "5decd9df5ada558b2e709af4d5146e2e40a5b659ea9a01dd66e6d3c74efaeb3a",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/README.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T01-lab-infrastructure.md",
+      "sha256": "5c9d6fe12d523de769922173a9ee3a627bc01477c2f4dac3f8c10997da0556d1",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T01-lab-infrastructure.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T02-inside-the-model.md",
+      "sha256": "f41b9f627628e1b5425ee3c94b955e23a303ec23e340d6ee0cf72f43ec3d3483",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T02-inside-the-model.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T03-agent-commerce-loyalty.md",
+      "sha256": "ccd01388dc0e5c2cef628fd7c92041cc56e4606f74af4035847795a60df78dd8",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T03-agent-commerce-loyalty.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T04-who-reviews-agent-code.md",
+      "sha256": "d349fd7e194dd39b776a65e9d2026c4b30a6210e6f6900058c0857f24c99d13d",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T04-who-reviews-agent-code.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T05-agent-incidents.md",
+      "sha256": "87752a34c74d3f3c40a5c2f27050b80324740740cb73b9ea94e1cd83cee6d5bb",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T05-agent-incidents.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T06-team-leads-and-agents.md",
+      "sha256": "98fb236254126acc4b720a4fb527e272678b0bfa970ab6c6abb979b671151d4f",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T06-team-leads-and-agents.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T07-deskilling.md",
+      "sha256": "cd20df3670075ea0fbd4c8d70e732f41da92dc2f8f9237fcd2194b04b3b8185a",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T07-deskilling.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T08-spec-driven-development.md",
+      "sha256": "5a9334c2e523f2871dcc0f4b5964de9ff00a04a6ca2a5548b69e471f2cef52c6",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T08-spec-driven-development.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T09-token-finops.md",
+      "sha256": "af33e2ff0a4497a062ecd936dd1d0499212b350222b5a3d22874e21e99b4ddb1",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T09-token-finops.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T10-open-vs-frontier-models.md",
+      "sha256": "0ab39dd546e4c4d5c3d270adf5642069d124972d95fc3977cc03e3856d4ce827",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T10-open-vs-frontier-models.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T11-agent-as-user.md",
+      "sha256": "421c803253a3e5c35ef274b19a4fbda121ab12cd5ff14049134b1b25d9bf82e3",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T11-agent-as-user.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T12-legacy-migrations.md",
+      "sha256": "552ee2f1797b84941e98130ad9c1c76a3541e5ab408154593f7ce328c0638a88",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T12-legacy-migrations.md"
+    },
+    {
+      "path": "docs/research/2026-10-31-3-aimigo-topics/T13-who-owns-agents.md",
+      "sha256": "6ac997aebc2675001578c62c3a4fb0caa0d321cf6aeda4720bde8ab4a47c870d",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-31-3-aimigo-topics/T13-who-owns-agents.md"
+    },
+    {
+      "path": "docs/research/2026-10-02-agent-autonomy-boundaries.md",
+      "sha256": "cb64212ec6ef0c765bbec8bba3906b88d1e0324b7c4036852d7029c4dda7aeaa",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-02-agent-autonomy-boundaries.md"
+    },
+    {
+      "path": "docs/research/2026-10-09-agent-payment-rights.md",
+      "sha256": "eae9610a88a707c2ec352847308be59eb70b279255d55e0d78c96282cf75ec37",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-09-agent-payment-rights.md"
+    },
+    {
+      "path": "docs/research/2026-10-09-agent-payment-rights-validation.md",
+      "sha256": "668cd21efa3dc408b3e33f30e66036e9ee9d3a346a557c99849a158bd7ca4f19",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-09-agent-payment-rights-validation.md"
+    },
+    {
+      "path": "docs/research/2026-10-16-agent-development-infrastructure.md",
+      "sha256": "eb68f66d3b6eba5c7c7c803236132621ba09c8c6cd6a353a8d60f8f47b17a01c",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/research/2026-10-16-agent-development-infrastructure.md"
+    },
+    {
+      "path": "docs/podcast-prep/3-aimigo-s1e13-announcement.md",
+      "sha256": "b75c5033c5aa69e9a175bd67e12287e023198bd307458664755bbdb5ff2ad27f",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/podcast-prep/3-aimigo-s1e13-announcement.md"
+    },
+    {
+      "path": "docs/youtube-timelines/3-aimigo.md",
+      "sha256": "4c9993e7b91f2ca24e3099e1c734e0cb3c5b284faa41cc10887b5d2570c1c826",
+      "sourceUrl": "https://github.com/polomodov/polomodov/blob/50001bbb27a97a18f29afc32f51882bb1c109b19/docs/youtube-timelines/3-aimigo.md"
+    }
+  ]
+}
