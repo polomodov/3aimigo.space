@@ -16,6 +16,15 @@ async function fixture(t) {
   const root = await mkdtemp(join(tmpdir(), 'aimigo-workflow-'));
   t.after(() => rm(root, { recursive: true, force: true }));
   await cp(new URL('content', rootUrl), join(root, 'content'), { recursive: true });
+  // Exercise a new release even after the real episode has been published.
+  const file = join(root, 'content/podcast.json');
+  const registry = await readJson(file);
+  registry.episodes = registry.episodes.filter((episode) => episode.slug !== slug);
+  const topic = registry.map.nodes.find((node) => node.id === params.topic);
+  delete topic.episodeId;
+  topic.kind = 'planned';
+  topic.status = 'next';
+  await writeFile(file, JSON.stringify(registry, null, 2) + '\n');
   await mkdir(join(root, 'public/covers'), { recursive: true });
   return root;
 }

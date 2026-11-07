@@ -61,6 +61,225 @@
   },
   "episodes": [
     {
+      "id": "3-aimigo-s1e13-agent-development-infrastructure",
+      "slug": "agent-development-infrastructure",
+      "season": 1,
+      "number": 13,
+      "date": "2026-11-06",
+      "duration": "1:39:55",
+      "durationIso": "PT1H39M55S",
+      "title": {
+        "ru": "Инфраструктура агентной разработки",
+        "en": "Infrastructure for agent-driven development"
+      },
+      "intro": {
+        "en": [
+          "Alexander Polomodov, Evgeny Sergeev and Aleksey Litvinov discuss the infrastructure behind agent-driven development.",
+          "The hosts follow a change from parallel agent work through CI, review and release, and consider the cost of an accepted result.",
+          "They compare approaches to coordination and verification, then discuss permissions, isolation and feedback from users."
+        ],
+        "ru": [
+          "Александр Поломодов, Евгений Сергеев и Алексей Литвинов обсуждают инфраструктуру агентной разработки.",
+          "Ведущие проходят путь изменения от параллельной работы агентов через CI и ревью до выпуска и обсуждают стоимость принятого результата.",
+          "Они сравнивают подходы к координации и проверке, а также говорят о правах агентов, изоляции и обратной связи от пользователей."
+        ]
+      },
+      "topics": {
+        "en": [
+          "Agent development",
+          "CI and version control",
+          "Change verification",
+          "Agent permissions"
+        ],
+        "ru": [
+          "Агентная разработка",
+          "CI и контроль версий",
+          "Проверка изменений",
+          "Полномочия агентов"
+        ]
+      },
+      "media": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=fns3vK5t8rI"
+        },
+        {
+          "platform": "podster",
+          "url": "https://podster.fm/podcasts/3-aimigo/e/532681/infrastruktura-agentnoy-razrabotki"
+        },
+        {
+          "platform": "apple-podcasts",
+          "url": "https://podcasts.apple.com/us/podcast/3-aimigo/id6804242419?i=1000800294696"
+        }
+      ],
+      "covers": {
+        "en": "/covers/agent-development-infrastructure-en.webp",
+        "ru": "/covers/agent-development-infrastructure-ru.webp"
+      },
+      "materials": [
+        {
+          "label": {
+            "en": "Research: Agent development infrastructure",
+            "ru": "Исследование: инфраструктура агентной разработки"
+          },
+          "url": {
+            "en": "https://polomodov.tech/en/2026-10-16-agent-development-infrastructure/",
+            "ru": "https://polomodov.tech/2026-10-16-agent-development-infrastructure/"
+          }
+        }
+      ],
+      "summary": {
+        "en": {
+          "title": "Infrastructure for agent development: from task to release",
+          "description": "A 3 AImigo summary on parallel agents, verification, version control and permissions.",
+          "lead": "Alexander Polomodov, Evgeny Sergeev and Aleksey Litvinov discuss how a stream of agent changes loads development infrastructure. They follow work from parallel execution to verification and release, comparing laboratory practices with the constraints faced by engineering teams.",
+          "sourceNote": "This summary condenses the episode; assessments and hypotheses reflect the participants’ views.",
+          "sections": [
+            {
+              "title": "From agent speed to system speed",
+              "paragraphs": [
+                "Alexander Polomodov opens with the load created by many parallel agents. Each consumes more than tokens: it needs a code copy, an environment, stored results and checks. Large labs offer useful engineering patterns, although their compute budgets and freedom to experiment differ from those of most teams.",
+                "Aleksey Litvinov describes friction when one engineer produces more changes than colleagues can process. Evgeny Sergeev adds that agent load is harder to predict from headcount: one task can spawn several working copies. Faster code generation shifts constraints to storage, CI, review and acceptance."
+              ]
+            },
+            {
+              "title": "Parallel work and queues",
+              "paragraphs": [
+                "Agents may fix the same problem or alter related parts of a system at once. A pessimistic approach restricts access in advance; an optimistic one allows parallel changes and resolves conflicts later. Even a clean merge can violate a business rule that was never made explicit.",
+                "The hosts discuss task, review and merge queues as ways to regulate flow. A queue can itself become a bottleneck. Evgeny also describes collecting agent questions and results in an inbox, so a person can respond at their own pace instead of constantly switching context.",
+                "Alexander compares coordination with running a large organisation: one central coordinator may not scale. Hierarchy distributes work, but Aleksey argues that roles at different levels are distinct. Adding another supervising agent is not enough; its responsibilities and lifetime need design."
+              ]
+            },
+            {
+              "title": "Reviewing the outcome",
+              "paragraphs": [
+                "Evgeny recounts discussions with engineering teams where more changes are created but value does not reach users faster because pull requests wait for review. Review also orders the flow of changes. The hosts do not claim that the industry has found a universal replacement.",
+                "One option is to classify changes by risk and automate routine decisions. Evgeny describes an experiment with small dependency updates: some can merge without a person when automated review and checks pass. The criticality of the affected system and consequences of failure still matter; a green CI run does not establish that behaviour is right for a user.",
+                "Another approach moves some checks after merge or relies on production observability. This improves throughput while requiring failures to be detected and repaired. Aleksey highlights the separate difficulty of evaluating new behaviour and interfaces. Even when code is cheap, gathering enough user feedback takes time and limits the pace of change."
+              ]
+            },
+            {
+              "title": "Tools for a particular flow",
+              "paragraphs": [
+                "The hosts discuss Anthropic’s Scion as infrastructure designed around a stream of agent changes. Alexander describes storing change metadata in a distributed database and contents in object storage, while retaining relationships between changes. A system needs to know not just the result but what it builds on and how it was combined.",
+                "The architecture reflects a choice to allow parallel work and run some checks after integration. The hosts do not recommend that every team build its own version-control system. They are looking for transferable principles and trade-offs; a lab’s scale and internal needs may differ from a listener’s.",
+                "Evgeny offers Symphony as another coordination model: agents take work from a tracker and people review outcomes and approvals around the task. He values the publication of a specification alongside an implementation because a team can adapt that description to its own environment."
+              ]
+            },
+            {
+              "title": "Feedback loops",
+              "paragraphs": [
+                "Alexander describes an agent’s inner loop: make a change, run the application, inspect logs and metrics, run static checks and tests, and retry when something fails. A person then reviews the change. A recurring process mistake can become a rule, test or automated check so the same comment need not consume attention again.",
+                "Automation helps only when a rule checks the property that matters. A linter cannot replace semantic judgement, and tests depend on the scenarios they cover. The local loop connects to a longer one: observing the system and its users can change the checks and the way the team works."
+              ]
+            },
+            {
+              "title": "Permissions and boundaries",
+              "paragraphs": [
+                "The hosts note the temptation to grant broad permissions so an agent can keep working uninterrupted. Convenience does not answer which actions are acceptable or how to limit damage. Alexander describes a cloud environment where secrets are kept from the agent and a proxy injects them for permitted requests.",
+                "Isolation, access rules and checks provide layers of protection. Each has limits: a model can make mistakes, while tools and environments can have vulnerabilities. The question is therefore not just whether to trust the model, but which operations are available, how they are observed and what happens after an error."
+              ]
+            },
+            {
+              "title": "The cost of an accepted change",
+              "paragraphs": [
+                "The discussion ends with economics. The bill extends beyond tokens for the first attempt: retries, automated review, CI, human work and repairs after release also consume resources. Alexander suggests linking these costs to an accepted change so alternatives can be compared on the same basis.",
+                "Evgeny notes that AI adds a line to team budgets while the value of each individual change is difficult to calculate. Aleksey suggests delivery metrics and freed capacity, while emphasizing the organisational question: leaders need to understand why spending has risen. The hosts present measurement as an unfinished problem rather than a formula for guaranteed returns."
+              ]
+            }
+          ],
+          "takeaways": [
+            "More changes shift bottlenecks to verification, integration and feedback from users.",
+            "Queues and explicit rules help coordinate parallel work but require their own capacity management.",
+            "Limit agent permissions and choose verification depth according to the consequences of failure."
+          ],
+          "sources": [
+            {
+              "label": "Episode video",
+              "url": "https://www.youtube.com/watch?v=fns3vK5t8rI"
+            }
+          ]
+        },
+        "ru": {
+          "title": "Инфраструктура агентной разработки: от задачи до выпуска",
+          "description": "Конспект 3 AImigo о параллельной работе агентов, проверках, контроле версий и полномочиях.",
+          "lead": "Александр Поломодов, Евгений Сергеев и Алексей Литвинов обсуждают, как поток изменений от агентов нагружает инфраструктуру разработки. Они проходят путь от параллельной работы до проверки и выпуска, сопоставляя практики лабораторий с ограничениями обычных инженерных команд.",
+          "sourceNote": "Конспект сокращён относительно выпуска; оценки и предположения передают позиции участников.",
+          "sections": [
+            {
+              "title": "От скорости агента к скорости системы",
+              "paragraphs": [
+                "Александр Поломодов начинает с вопроса о нагрузке, которую создаёт множество параллельных агентов. Каждый из них не только потребляет токены: ему нужна копия кода, среда, сохранение результатов и проверки. Опыт больших лабораторий интересен как источник инженерных приёмов, хотя их доступ к вычислениям и возможность экспериментировать отличаются от условий большинства команд.",
+                "Алексей Литвинов описывает напряжение внутри команды, когда один инженер создаёт изменений больше, чем соседние участники успевают обработать. Евгений Сергеев отмечает, что нагрузку от агентов сложнее предсказать по числу сотрудников: одна задача может породить несколько параллельных рабочих копий. Ускорение генерации кода переносит ограничение на хранение, CI, ревью и принятие изменений."
+              ]
+            },
+            {
+              "title": "Параллельная работа и очереди",
+              "paragraphs": [
+                "Несколько агентов могут одновременно исправлять одну проблему или менять связанные части системы. Пессимистический подход заранее ограничивает доступ к области работы; оптимистический допускает параллельные изменения и разрешает конфликты позже. Но синтаксически совместимые изменения ещё не обязательно совместимы по смыслу: они способны нарушить общее бизнес-правило, которое нигде не было явно записано.",
+                "Ведущие обсуждают очереди задач, проверок и слияния как способ управлять потоком. Очередь помогает дозировать работу, но сама может стать узким местом. Евгений рассказывает и об очереди входящих запросов от агентов: человек собирает вопросы и результаты в одном месте и отвечает в собственном темпе, сокращая число вынужденных переключений контекста.",
+                "Александр проводит аналогию с координацией большой организации: один центральный координатор не обязательно выдержит рост потока. Иерархия распределяет работу, но, как замечает Алексей, роли на разных уровнях не одинаковы. Простого добавления ещё одного агента-руководителя недостаточно: нужно проектировать обязанности и время жизни таких участников."
+              ]
+            },
+            {
+              "title": "Ревью и проверка результата",
+              "paragraphs": [
+                "Евгений пересказывает обсуждение с инженерными командами: число подготовленных изменений растёт, однако ценность может не доходить до пользователей быстрее, если пул-реквесты ожидают проверки. Ревью, первоначально служившее и обмену знаниями, превращается также в механизм упорядочивания потока. При этом участники не считают, что у индустрии уже есть универсальная замена этой стадии.",
+                "Один вариант — классифицировать изменения по риску и автоматизировать рутинные решения. Евгений приводит пример эксперимента с небольшими обновлениями зависимостей: если автоматические проверки и ревью проходят, часть изменений можно сливать без человека. Критичность затронутой системы и последствия ошибки должны влиять на решение; зелёный CI сам по себе не объясняет, подходит ли новое поведение пользователю.",
+                "Другой подход переносит часть проверок после слияния или опирается на наблюдаемость в production. Он повышает пропускную способность ценой необходимости обнаруживать и исправлять сбои. Алексей отдельно подчёркивает трудность проверки нового поведения и интерфейса. Даже если код появляется быстро, для оценки реакции пользователей нужно накопить достаточно данных: обратная связь реального мира ограничивает темп изменений."
+              ]
+            },
+            {
+              "title": "Инструменты под собственный поток",
+              "paragraphs": [
+                "Ведущие обсуждают Scion от Anthropic как пример инфраструктуры, спроектированной под поток изменений агентов. Александр описывает хранение метаданных изменений в распределённой базе и содержимого в объектном хранилище, а также необходимость сохранять связи между изменениями. Важно не только записать результат, но и понять, от каких предыдущих изменений он зависит и как объединён с другими.",
+                "Эта архитектура отражает конкретный выбор: дать агентам работать параллельно и выполнять часть проверок после объединения. Участники не предлагают каждой команде писать собственную систему контроля версий. Их интересуют переносимые принципы и компромиссы; масштаб лаборатории и её внутренние задачи могут не совпадать с задачами слушателя.",
+                "Евгений приводит Symphony как другой способ координации: агент берёт работу из трекера, а человек рассматривает результат и подтверждения вокруг задачи. Его заинтересовала публикация не только реализации, но и спецификации, которую команда может адаптировать к своей среде. Это переносит часть обсуждения с конкретного кода на описание желаемой системы."
+              ]
+            },
+            {
+              "title": "Циклы обратной связи",
+              "paragraphs": [
+                "Александр описывает внутренний цикл агента: изменение, запуск приложения, логи и метрики, статические проверки и тесты; при ошибке агент возвращается к исправлению. После подготовки изменения подключается человек. Если на ревью обнаружилась повторяющаяся ошибка процесса, её можно выразить как правило, тест или автоматическую проверку, чтобы не расходовать внимание на одно и то же замечание снова.",
+                "Такая автоматизация полезна лишь тогда, когда правило действительно проверяет нужное свойство. Линтер не заменяет смысловую оценку, а результаты тестов зависят от того, какие сценарии в них представлены. Ведущие связывают локальные циклы агента с более длинной петлёй: наблюдение за поведением системы и пользователей помогает менять сами проверки и способ работы."
+              ]
+            },
+            {
+              "title": "Полномочия и границы",
+              "paragraphs": [
+                "При обсуждении доступа участники отмечают соблазн выдать агенту широкие права ради непрерывной работы. Но удобство не устраняет вопрос о том, какие действия допустимы и как ограничить ущерб. Александр приводит пример облачной среды, где секреты не передаются непосредственно агенту, а нужные данные подставляются посредником при разрешённом обращении.",
+                "Изоляция среды, правила доступа и проверки образуют несколько слоёв защиты. Каждый слой имеет пределы: модель может ошибиться, а инструменты и среда — содержать уязвимости. Поэтому обсуждение полномочий связано не только с доверием к модели, но и с тем, какие операции доступны, как их наблюдают и что произойдёт при ошибке."
+              ]
+            },
+            {
+              "title": "Стоимость принятого изменения",
+              "paragraphs": [
+                "В конце разговора участники возвращаются к экономике. Цена не заканчивается расходом токенов на первую попытку: к ней добавляются повторные запуски, машинное ревью, CI, работа человека и возможное исправление после выпуска. Александр предлагает связывать эти расходы с конкретным принятым изменением, чтобы сравнивать варианты на общей основе.",
+                "Евгений замечает, что затраты на AI становятся дополнительной строкой бюджета команды, а оценить ценность каждого изменения трудно. Алексей предлагает смотреть на показатели поставки и высвобождённую ёмкость, но подчёркивает организационный вопрос: руководству нужно понимать, зачем выросли расходы. Участники рассматривают измерение как незавершённую задачу, а не обещают готовую формулу окупаемости."
+              ]
+            }
+          ],
+          "takeaways": [
+            "Рост числа изменений переносит узкое место на проверку, интеграцию и получение обратной связи от пользователей.",
+            "Очереди и явные правила помогают управлять параллельной работой, но сами требуют контроля пропускной способности.",
+            "Разграничивайте права агентов и выбирайте глубину проверки с учётом последствий ошибки."
+          ],
+          "sources": [
+            {
+              "label": "Видеозапись выпуска",
+              "url": "https://www.youtube.com/watch?v=fns3vK5t8rI"
+            }
+          ]
+        }
+      },
+      "publication": {
+        "reviewedAt": "2026-11-07T10:24:01.118Z",
+        "contentSha256": "0f49d71e248091d55e1a8e5f4cc6feb0e5bacbfbc586342a0553d33dd7f497ae",
+        "sourceKind": "transcript",
+        "sourceSha256": "a751c6458137308399fa5d94fcaa5af395d7e69d5308c04274a686446becf70b"
+      }
+    },
+    {
       "id": "3-aimigo-s1e12-october-2026-ai-digest",
       "slug": "october-2026-ai-digest",
       "season": 1,
@@ -2227,7 +2446,7 @@
     }
   ],
   "map": {
-    "asOf": "2026-11-05",
+    "asOf": "2026-11-06",
     "clusters": [
       {
         "id": "delivery",
@@ -2315,8 +2534,7 @@
       {
         "id": "t1",
         "cluster": "delivery",
-        "kind": "planned",
-        "status": "next",
+        "kind": "episode",
         "month": "2026-11",
         "label": {
           "ru": [
@@ -2336,7 +2554,8 @@
           "ru": "Что происходит с CI, контролем версий, очередями слияния и полномочиями, когда изменения готовят тысячи агентов, и как считать стоимость принятого изменения с учётом неудачных попыток, проверок и откатов.",
           "en": "What happens to CI, version control, merge queues and permissions when thousands of agents prepare changes, and how to count the cost of an accepted change including failed attempts, checks and rollbacks."
         },
-        "prepPath": "/2026-10-16-agent-development-infrastructure"
+        "prepPath": "/2026-10-16-agent-development-infrastructure",
+        "episodeId": "3-aimigo-s1e13-agent-development-infrastructure"
       },
       {
         "id": "t4",
