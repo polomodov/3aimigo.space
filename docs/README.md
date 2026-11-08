@@ -6,6 +6,11 @@ archive retains the original Russian wording and research dates.
 
 - [Episode workflow](episode-workflow.md): prepare a discussion, publish a public
   brief, obtain a real speech source, edit the bilingual summary and release.
+- [Topic selection for November 2026–January 2027](podcast-prep/2026-11-08-topic-selection/README.md):
+  the working package as of 8 November 2026, in Russian, with a per-topic
+  analysis, a draft 90-minute plan for each candidate topic, dated search notes,
+  the proposed schedule and the questions for the hosts' planning call. Its
+  schedule supersedes the one in the dossier package below.
 - [13-topic dossier package](research/2026-10-31-3-aimigo-topics/README.md): the
   editorial plan assembled on 31 October–1 November 2026, including evidence,
   counterarguments, host positions and possible guests.
